@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title></title>
+        <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.1.0.min.css" />
+        <link rel="stylesheet" href="style/my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="jquerymobile/jquery.min.js"></script>
+        <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>       
+    </head>
+    <body>
+        <!-- registration -->
+        <div data-role="page" id="registration" data-title="修改收货地址">
+            <div data-role="header" data-theme="a" >
+               <div class="header"> 
+               <div class="logo"><a href=""><img src="images/logo.png"></a></div>
+             <div class="nav"> 
+              <a href="productlist.html" class="menu"></a>
+                <a href="login.html" class="user"></a>
+                 <a href="shoppingcart.html" class="cart"></a>
+                </div>
+                  </div>  
+                  
+                  <div data-role="navbar" data-iconpos="left" >
+                  <ul>
+                        <li>
+                            <a href="shoppingcart.html" data-transition="slide" data-theme="c" data-icon="check">购物车</a>
+                        </li>
+                        <li>
+                            <a href="orderconfirm.html" data-transition="slide" data-theme="c" data-icon="arrow-r">提交订单</a>
+                        </li>
+                        <li>
+                            <a href="addresslist.html" data-transition="slide"  data-rel="back" data-theme="c" data-icon="arrow-r">选择收货地址</a>
+                        </li>
+                        <li>
+                            <a href="#" data-theme="c" data-icon="">修改收货地址</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content">
+                <form id="frmLogin" action="registration.html" >               
+                    <div data-role="fieldcontain" >
+                        <fieldset data-role="controlgroup" class="ui-hide-label">
+                            <label for="name">
+                               收货人姓名
+                            </label>
+                            <input type="text" id="name" name="name" class="required" placeholder="请填写收货人姓名"  value="王宇鹏" />
+                        </fieldset>
+                    </div>       
+                    <div data-role="fieldcontain">
+<fieldset data-role="controlgroup" data-type="horizontal" class="ui-hide-label"> 
+	<legend>选择地区</legend>
+
+<label for="select-choice-province">省份</label>
+<select name="select-choice-province" id="select-choice-province">
+<option value="1">北京市</option>
+<option value="2">天津市</option>
+<option value="3">河北省</option>
+<option value="4">山西省</option>
+<option value="5">内蒙古自治区</option>
+<option value="6">辽宁省</option>
+<option value="7">吉林省</option>
+<option value="8">黑龙江省</option>
+<option value="9" selected="selected">上海市</option>
+<option value="10">江苏省</option>
+<option value="11">浙江省</option>
+<option value="12">安徽省</option>
+<option value="13">福建省</option>
+<option value="14">江西省</option>
+<option value="15">山东省</option>
+<option value="16">河南省</option>
+<option value="17">湖北省</option>
+<option value="18">湖南省</option>
+<option value="19">广东省</option>
+<option value="20">广西壮族自治区</option>
+<option value="22">重庆市</option>
+<option value="23">四川省</option>
+<option value="24">贵州省</option>
+<option value="25">云南省</option>
+<option value="26">西藏自治区</option>
+<option value="27">陕西省</option>
+<option value="28">甘肃省</option>
+<option value="29">青海省</option>
+<option value="30">宁夏回族自治区</option>
+<option value="31">新疆维吾尔自治区</option>
+<option value="32">台湾省</option>
+<option value="33">香港特别行政区</option>
+<option value="34">海南省</option>	
+</select>
+
+    <label for="select-choice-city">城市</label>
+<select name="select-choice-city" id="select-choice-city">
+<option value="21" selected="selected">上海市</option>
+</select>
+
+	<label for="select-choice-country">区县</label>
+<select name="select-choice-country" id="select-choice-country">
+<option value="895">金山区</option>
+<option value="899">奉贤区</option>
+<option value="901">崇明县</option>
+<option value="12316">宝山区</option>
+<option value="12317">长宁区</option>
+<option value="12318">虹口区</option>
+<option value="12319">黄浦区</option>
+<option value="12320">嘉定区</option>
+<option value="12321">静安区</option>
+<option value="12322">卢湾区</option>
+<option value="12323">闵行区</option>
+<option value="12324">南汇区</option>
+<option value="12325">浦东新区</option>
+<option value="12326" selected="selected">普陀区</option>
+<option value="12327">青浦区</option>
+<option value="12328">松江区</option>
+<option value="12329">徐汇区</option>
+<option value="12330">杨浦区</option>
+<option value="12331">闸北区</option>
+</select>
+</fieldset>
+</div>
+
+       <div data-role="fieldcontain" class="ui-hide-label">
+                        <fieldset data-role="controlgroup">
+                            <label for="address">
+                                具体地址
+                            </label>
+                          <input type="text" id="address" name="address" class="required" placeholder=""  value="澳门路" />
+                        </fieldset>
+                    </div>
+                    
+                    
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <fieldset data-role="controlgroup">
+                            <label for="zipcode">
+                                请填写邮政编码
+                            </label>
+                            <input type="text" id="zipcode" name="zipcode"  placeholder="" value="200060" />
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain"> 	   
+	  <fieldset data-role="controlgroup" data-type="horizontal" >
+	<legend>地址类型</legend>
+     	<input type="radio" name="radio-choice-addtype" id="radio-choice-addtype-1" value="1" checked="checked" />
+     	<label for="radio-choice-addtype-1">公司地址</label>
+
+     	<input type="radio" name="radio-choice-addtype" id="radio-choice-addtype-2" value="2"  />
+     	<label for="radio-choice-addtype-2">家庭地址</label>
+
+     	<input type="radio" name="radio-choice-addtype" id="radio-choice-addtype-3" value="3"  />
+     	<label for="radio-choice-addtype-3">其他</label>     	
+</fieldset>
+</div>
+             <div data-role="fieldcontain" class="ui-hide-label">
+                        <fieldset data-role="controlgroup">
+                            <label for="mobile">
+                                请输入手机号码
+                            </label>
+                            <input type="text" id="mobile" name="mobile"  placeholder="请输入手机号码" value="13564568304" />
+                        </fieldset>
+                    </div>
+                    
+              <a href="addresslist.html" data-transition="slide" data-rel="back" data-role="button"  data-theme="a">
+                    确认保存
+                </a>
+                </form>
+            </div>
+           
+      <div data-role="footer" data-theme="c" class="p10">
+                 <div class="ui-grid-b" style="padding-bottom:5px;">
+                        <div class="ui-block-a">                           
+                                <a href="login.html" data-transition="fade">
+                                    登录
+                                </a>                           
+                        </div>
+                        <div class="ui-block-b">                            
+                                <a href="registration.html" data-transition="fade">
+                                    注册
+                                </a>                           
+                        </div>
+                          <div class="ui-block-c">                          
+                                <a href="" data-transition="fade">
+                                    电脑版
+                                </a>                            
+                        </div>
+                    </div>                    
+            <div><a href="#"  data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a></div>
+            <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
+            </div>           
+        </div>
+
+  
+        <script>     
+        </script>
+    </body>
+</html>

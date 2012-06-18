@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title></title>
+        <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.1.0.min.css" />
+        <link rel="stylesheet" href="style/my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="jquerymobile/jquery.min.js"></script>
+        <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>       
+    </head>
+    <body>
+        <!-- registration -->
+        <div data-role="page" id="registration" data-title="添加新的收货地址">
+            <div data-role="header" data-theme="a" >
+               <div class="header"> 
+               <div class="logo"><a href=""><img src="images/logo.png"></a></div>
+             <div class="nav"> 
+              <a href="productlist.html" class="menu"></a>
+                <a href="login.html" class="user"></a>
+                 <a href="shoppingcart.html" class="cart"></a>
+                </div>
+                  </div>  
+                  
+                  <div data-role="navbar" data-iconpos="left" >
+                  <ul>
+                        <li>
+                            <a href="shoppingcart.html" data-transition="slide" data-theme="c" data-icon="check">购物车</a>
+                        </li>
+                        <li>
+                            <a href="orderconfirm.html" data-transition="slide" data-theme="c" data-icon="arrow-r">提交订单</a>
+                        </li>
+                        <li>
+                            <a href="addresslist.html" data-transition="slide"  data-rel="back" data-theme="c" data-icon="arrow-r">选择收货地址</a>
+                        </li>
+                        <li>
+                            <a href="#" data-theme="c" data-icon="">添加新的收货地址</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content">
+                <form id="frmLogin" action="registration.html" >               
+                    <div data-role="fieldcontain" >
+                        <fieldset data-role="controlgroup" class="ui-hide-label">
+                            <label for="email">
+                               收货人姓名
+                            </label>
+                            <input type="text" id="email" name="email" class="required" placeholder="请填写收货人姓名"  value="" />
+                        </fieldset>
+                    </div>       
+                    <div data-role="fieldcontain">
+<fieldset data-role="controlgroup" data-type="horizontal" class="ui-hide-label"> 
+	<legend>选择地区</legend>
+
+<label for="select-choice-year">省份</label>
+<select name="select-choice-year" id="select-choice-year">
+	<option>省份</option>
+    <option value="2013">2013</option>
+    <option value="2012">2012</option>
+	<option value="2011">2011</option>
+    <option value="2010">2010</option>
+    <option value="2009">2009</option>
+    <option value="2008">2008</option>
+    <option value="2007">2007</option>		
+</select>
+
+    <label for="select-choice-month">城市</label>
+<select name="select-choice-month" id="select-choice-month">
+	<option>城市</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="10">10</option>
+    <option value="12">12</option>   
+</select>
+
+	<label for="select-choice-day">区县</label>
+<select name="select-choice-day" id="select-choice-day">
+	<option>区县</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="10">10</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+	<option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>	
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>	
+</select>
+</fieldset>
+</div>
+
+       <div data-role="fieldcontain" class="ui-hide-label">
+                        <fieldset data-role="controlgroup">
+                            <label for="authcode">
+                                具体地址
+                            </label>
+                          <input type="text" id="email" name="email" class="required" placeholder="请填写详细的的收货地址"  value="" />
+                        </fieldset>
+                    </div>
+                    
+                    
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <fieldset data-role="controlgroup">
+                            <label for="authcode">
+                                请填写邮政编码
+                            </label>
+                            <input type="text" id="authcode" name="authcode"  placeholder="请填写邮政编码" value="" />
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain"> 	   
+	  <fieldset data-role="controlgroup" data-type="horizontal" >
+	<legend>地址类型</legend>
+     	<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+     	<label for="radio-choice-1">公司地址</label>
+
+     	<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+     	<label for="radio-choice-2">家庭地址</label>
+
+     	<input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3"  />
+     	<label for="radio-choice-3">其他</label>     	
+</fieldset>
+</div>
+             <div data-role="fieldcontain" class="ui-hide-label">
+                        <fieldset data-role="controlgroup">
+                            <label for="authcode">
+                                请输入手机号码
+                            </label>
+                            <input type="text" id="authcode" name="authcode"  placeholder="请输入手机号码" value="" />
+                        </fieldset>
+                    </div>
+                    
+              <a href="addresslist.html" data-transition="slide" data-rel="back" data-role="button"  data-theme="a">
+                    确认保存
+                </a>
+                </form>
+            </div>
+           
+      <div data-role="footer" data-theme="c" class="p10">
+                 <div class="ui-grid-b" style="padding-bottom:5px;">
+                        <div class="ui-block-a">                           
+                                <a href="login.html" data-transition="fade">
+                                    登录
+                                </a>                           
+                        </div>
+                        <div class="ui-block-b">                            
+                                <a href="registration.html" data-transition="fade">
+                                    注册
+                                </a>                           
+                        </div>
+                          <div class="ui-block-c">                          
+                                <a href="" data-transition="fade">
+                                    电脑版
+                                </a>                            
+                        </div>
+                    </div>                    
+            <div><a href="#"  data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a></div>
+            <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
+            </div>           
+        </div>
+
+        <script>     
+        </script>
+    </body>
+</html>

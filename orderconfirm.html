@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title></title>
+        <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.1.0.min.css" />
+        <link rel="stylesheet" href="style/my.css" />       
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="jquerymobile/jquery.min.js"></script>
+        <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>               
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="productlist" data-title="购物车">
+            <div data-role="header" data-theme="a" >
+               <div class="header"> 
+               <div class="logo"><a href=""><img src="images/logo.png"></a></div>
+             <div class="nav"> 
+             <a href="productlist.html" class="menu"></a>
+                <a href="login.html" class="user"></a>
+                 <a href="shoppingcart.html" class="cart"></a>
+                </div>
+                  </div>  
+                  
+                  <div data-role="navbar" data-iconpos="left" >
+                  <ul>
+                        <li>
+                            <a href="shoppingcart.html" data-theme="c" data-icon="check" data-transition="slide" data-rel="back">购物车</a>
+                        </li>
+                        <li>
+                            <a href="#" data-theme="c" data-icon="arrow-r">提交订单</a>
+                        </li>
+                        <li>
+                            <a href="#" data-theme="c" data-icon="">&nbsp;</a>
+                        </li>
+                        <li>
+                            <a href="#" data-theme="c" data-icon="">&nbsp;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>    
+                    
+            <div data-role="content">
+                <ul data-role="listview" data-divider-theme="d" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        收货人信息
+                    </li>
+                    <li data-theme="c">
+                        <a href="addresslist.html" data-transition="slide">
+                            
+<p>收货人: 王宇鹏</p>
+<p>收货地址: 上海市普陀区， 澳门路519弄华生大厦1号楼7楼</p>
+<p>邮编: 200060</p>
+<p>电话: 13564568304</p>
+</p>
+                        </a>
+                    </li>     
+                    <li data-role="list-divider" role="heading">
+                       支付方式
+                    </li>
+                    <li data-theme="c">
+                        <a href="paymentlist.html" data-transition="slide">
+                            <p>货到付款</p>
+                        </a>
+                    </li>
+                     <li data-role="list-divider" role="heading"> 
+						配送方式 
+					</li>
+                     <li data-theme="c">
+                        <a href="deliverylist.html" data-transition="slide">
+                            <p>母婴之家快递  上海市区用户，单笔订单满50元免费运费。当日21点前的订单可在次日及次日以后的日期送到，21点以后的订单需第三天及以后的日期送到。</p>
+						<p>送货日期：2012-06-01</p>
+						<p>付款方式：现金</p>
+                        </a>
+                    </li>  
+
+                     <li data-role="list-divider" role="heading"> 
+						发票信息 
+					</li>
+                    <li data-theme="c">
+                        <a href="invoice.html" data-transition="slide">                        
+						<p>发票类型：食品发票</p>
+						<p>发票抬头：公司 宜家中国</p>
+                        </a>
+                    </li>  
+                     <li data-role="list-divider" role="heading"> 
+						订单备注
+					</li>
+                     <li data-theme="c">
+                      <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+                    </li>  
+                </ul> 
+                <div class="">
+                <div data-role="fieldcontain">
+					<label>商品总金额: </label>256元
+				</div>
+                  <div data-role="fieldcontain">
+					<label>+运费: </label>30元
+				</div>
+                  <div data-role="fieldcontain">
+					<label>-优惠金额: </label>10元
+				</div>
+                  <div data-role="fieldcontain" class="ui-font-bold">
+					<label>您需支付总金额: </label><strong class="ui-font-red">276元</strong>
+                 </div>
+                </div>
+                <a href="makeorder.html" data-role="button"  data-transition="slide" data-theme="a">
+                    提交订单
+                </a>
+    		</div>  
+             
+      <div data-role="footer" data-theme="c" class="p10">
+                 <div class="ui-grid-b" style="padding-bottom:5px;">
+                        <div class="ui-block-a">                           
+                                <a href="login.html" data-transition="fade">
+                                    登录
+                                </a>                           
+                        </div>
+                        <div class="ui-block-b">                            
+                                <a href="registration.html" data-transition="fade">
+                                    注册
+                                </a>                           
+                        </div>
+                          <div class="ui-block-c">                          
+                                <a href="" data-transition="fade">
+                                    电脑版
+                                </a>                            
+                        </div>
+                    </div>                    
+            <div><a href="#productlist"  data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a></div>
+            <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
+            </div>
+           
+        </div>
+        <script>     
+        </script>
+    </body>
+</html>
