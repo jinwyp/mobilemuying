@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>商品详情</title>
+        <title></title>
         <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.1.0.min.css" />
         <link rel="stylesheet" href="style/my.css" />       
         <style>
@@ -14,7 +14,7 @@
     </head>
     <body>
         <!-- intro -->
-        <div data-role="page" id="intro">
+        <div data-role="page" id="intro" data-title="商品简介">
             <div data-role="header" data-theme="a" >
                <div class="header"> 
                <div class="logo"><a href=""><img src="images/logo.png"></a></div>
@@ -34,7 +34,7 @@
                             <a href="productlist.html" data-theme="c" data-icon="grid" class="ui-btn-active">全部分类</a>
                         </li>
                         <li>
-                            <a href="productlist.html" data-theme="c" data-icon="grid">XXXX商品</a>
+                            <a href="productlist.html" data-theme="e" data-icon="grid">XXXX商品</a>
                         </li>
                         <li>
                             <a href="productlist.html" data-theme="c" >&nbsp;</a>
@@ -48,10 +48,10 @@
                             <a href="#intro" data-theme="e" class="ui-btn-active" data-transition="slide" >简介</a>
                         </li>
                         <li>
-                            <a href="#detail" data-theme="e" data-transition="slide" >详情</a>
+                            <a href="#detail" data-theme="c" data-transition="slide" >详情</a>
                         </li>
                         <li>
-                            <a href="#comments" data-theme="e" data-transition="slide" >评论</a>
+                            <a href="#comments" data-theme="c" data-transition="slide" >评论</a>
                         </li>                    
                     </ul>
                 </div>
@@ -112,7 +112,7 @@
         
         
  <!-- detail -->
-        <div data-role="page" id="detail">
+        <div data-role="page" id="detail" data-title="商品详情">
             <div data-role="header" data-theme="a" >
                <div class="header"> 
                <div class="logo"><a href=""><img src="images/logo.png"></a></div>
