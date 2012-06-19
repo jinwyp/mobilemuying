@@ -13,13 +13,12 @@
         <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>               
     </head>
     <body>
-        <!-- Home -->
-        <div data-role="page" id="productlist" data-title="提交订单">
+        <!-- orderconfirm -->
+        <div data-role="page" id="orderconfirm" data-title="提交订单">
             <div data-role="header" data-theme="a" >
                <div class="header"> 
                <div class="logo"><a href=""><img src="images/logo.png"></a></div>
-             <div class="nav"> 
-             <a href="productlist.html" class="menu"></a>
+             <div class="nav"> <a href="category.html" class="menu"></a>
                 <a href="login.html" class="user"></a>
                  <a href="shoppingcart.html" class="cart"></a>
                 </div>
@@ -62,7 +61,7 @@
                        支付方式
                     </li>
                     <li data-theme="c">
-                        <a href="paymentlist.html" data-transition="slide">
+                        <a href="#paymentlist" data-transition="slide">
                             <p>货到付款</p>
                         </a>
                     </li>
@@ -70,7 +69,7 @@
 						配送方式 
 					</li>
                      <li data-theme="c">
-                        <a href="deliverylist.html" data-transition="slide">
+                        <a href="#deliverylist" data-transition="slide">
                             <p>母婴之家快递  上海市区用户，单笔订单满50元免费运费。当日21点前的订单可在次日及次日以后的日期送到，21点以后的订单需第三天及以后的日期送到。</p>
 						<p>送货日期：2012-06-01</p>
 						<p>付款方式：现金</p>
@@ -81,7 +80,7 @@
 						发票信息 
 					</li>
                     <li data-theme="c">
-                        <a href="invoice.html" data-transition="slide">                        
+                        <a href="#invoice" data-transition="slide">                        
 						<p>发票类型：食品发票</p>
 						<p>发票抬头：公司 宜家中国</p>
                         </a>
@@ -131,6 +130,337 @@
                         </div>
                     </div>                    
             <div><a href="#productlist"  data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a></div>
+            <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
+            </div>
+           
+        </div>
+        
+ <!-- paymentlist -->
+        <div data-role="page" id="paymentlist" data-title="选择支付方式">
+            <div data-role="header" data-theme="a" >
+               <div class="header"> 
+               <div class="logo"><a href=""><img src="images/logo.png"></a></div>
+             <div class="nav"> <a href="category.html" class="menu"></a>
+                <a href="login.html" class="user"></a>
+                 <a href="shoppingcart.html" class="cart"></a>
+                </div>
+                  </div>                    
+              
+                  <div data-role="navbar" data-iconpos="left" >
+                  <ul>
+                        <li>
+                            <a href="shoppingcart.html" data-transition="slide" data-theme="c" data-icon="check">购物车</a>
+                        </li>
+                        <li>
+                            <a href="orderconfirm.html" data-transition="slide" data-theme="c" data-icon="arrow-r" data-rel="back">提交订单</a>
+                        </li>
+                        <li>
+                            <a href="#" data-theme="c" data-icon="">选择支付方式</a>
+                        </li>
+                        <li>
+                            <a href="#" data-theme="c" data-icon="">&nbsp;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>    
+                    
+            <div data-role="content">
+                <fieldset data-role="controlgroup">
+	<legend></legend>
+     	<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+     	<label for="radio-choice-1">在线支付（支持绝大数银行借记卡及部分银行信息卡）
+</label>
+
+     	<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+     	<label for="radio-choice-2">货到付款（送货上门后再付款，支持现金或POS机刷卡)
+</label>
+
+</fieldset>
+ <a href="orderconfirm.html" data-transition="slide" data-rel="back" data-role="button"  data-theme="a">
+                    确认保存
+                </a>
+    		</div>  
+             
+      <div data-role="footer" data-theme="c" class="p10">
+                 <div class="ui-grid-b" style="padding-bottom:5px;">
+                        <div class="ui-block-a">                           
+                                <a href="login.html" data-transition="fade">
+                                    登录
+                                </a>                           
+                        </div>
+                        <div class="ui-block-b">                            
+                                <a href="registration.html" data-transition="fade">
+                                    注册
+                                </a>                           
+                        </div>
+                          <div class="ui-block-c">                          
+                                <a href="" data-transition="fade">
+                                    电脑版
+                                </a>                            
+                        </div>
+                    </div>                    
+            <div><a href="#"  data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a></div>
+            <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
+            </div>
+           
+        </div>
+        
+ <!-- deliverylist -->
+        <div data-role="page" id="deliverylist" data-title="选择配送方式">
+            <div data-role="header" data-theme="a" >
+               <div class="header"> 
+               <div class="logo"><a href=""><img src="images/logo.png"></a></div>
+             <div class="nav"> <a href="category.html" class="menu"></a>
+                <a href="login.html" class="user"></a>
+                 <a href="shoppingcart.html" class="cart"></a>
+                </div>
+                  </div>                    
+              
+                  <div data-role="navbar" data-iconpos="left" >
+                  <ul>
+                        <li>
+                            <a href="shoppingcart.html" data-transition="slide" data-theme="c" data-icon="check">购物车</a>
+                        </li>
+                        <li>
+                            <a href="orderconfirm.html" data-transition="slide" data-theme="c" data-icon="arrow-r" data-rel="back">提交订单</a>
+                        </li>
+                        <li>
+                            <a href="#" data-theme="c" data-icon="">选择配送方式</a>
+                        </li>
+                        <li>
+                            <a href="#" data-theme="c" data-icon="">&nbsp;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>    
+                    
+            <div data-role="content">
+             <ul data-role="listview" data-divider-theme="d" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                       选择配送方式
+                    </li>
+                    <li data-theme="c">
+                       <fieldset data-role="controlgroup">
+	<legend></legend>
+     	<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+     	<label for="radio-choice-1">母婴之家快递（覆盖范围上海市区用户）
+</label>
+
+     	<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+     	<label for="radio-choice-2">中通快递送货（覆盖范围江苏、浙江省用户）
+</label>
+     	<input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3"  />
+     	<label for="radio-choice-3">EMS邮政特快（覆盖范围全国绝大部分乡镇村）
+</label>
+</fieldset>
+                    </li>     
+                    <li data-role="list-divider" role="heading">
+                       填写送货时间
+                    </li>
+                    <li data-theme="c">
+                    <fieldset data-role="controlgroup" data-type="horizontal"> 
+	<legend></legend>
+<label for="select-choice-year">年</label>
+<select name="select-choice-year" id="select-choice-year">
+	<option>年</option>
+    <option value="2013">2013</option>
+    <option value="2012">2012</option>
+	<option value="2011">2011</option>
+    <option value="2010">2010</option>
+    <option value="2009">2009</option>
+    <option value="2008">2008</option>
+    <option value="2007">2007</option>		
+</select>
+
+    <label for="select-choice-month">月</label>
+<select name="select-choice-month" id="select-choice-month">
+	<option>月</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="10">10</option>
+    <option value="12">12</option>   
+</select>
+
+	<label for="select-choice-day">日</label>
+<select name="select-choice-day" id="select-choice-day">
+	<option>日</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="10">10</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+	<option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>	
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>	
+</select>
+</fieldset>
+                    </li>
+                     <li data-role="list-divider" role="heading"> 
+						付款方式 
+					</li>
+                     <li data-theme="c">
+                         <fieldset data-role="controlgroup">
+	<legend></legend>
+     	<input type="radio" name="radio-choice-5" id="radio-choice-1" value="choice-1" checked="checked" />
+     	<label for="radio-choice-1">现金
+</label>
+
+     	<input type="radio" name="radio-choice-5" id="radio-choice-2" value="choice-2"  />
+     	<label for="radio-choice-2">POS机刷卡（仅支持带有银联标识的银行卡）
+</label>
+
+</fieldset>
+                    </li>
+                    </ul>
+           
+ <a href="orderconfirm.html" data-transition="slide" data-rel="back" data-role="button"  data-theme="a">
+                    确认保存
+                </a>
+    		</div>  
+             
+      <div data-role="footer" data-theme="c" class="p10">
+                 <div class="ui-grid-b" style="padding-bottom:5px;">
+                        <div class="ui-block-a">                           
+                                <a href="login.html" data-transition="fade">
+                                    登录
+                                </a>                           
+                        </div>
+                        <div class="ui-block-b">                            
+                                <a href="registration.html" data-transition="fade">
+                                    注册
+                                </a>                           
+                        </div>
+                          <div class="ui-block-c">                          
+                                <a href="" data-transition="fade">
+                                    电脑版
+                                </a>                            
+                        </div>
+                    </div>                    
+            <div><a href="#"  data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a></div>
+            <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
+            </div>
+           
+        </div>
+        
+<!-- invoice -->
+        <div data-role="page" id="invoice" data-title="填写发票信息">
+            <div data-role="header" data-theme="a" >
+               <div class="header"> 
+               <div class="logo"><a href=""><img src="images/logo.png"></a></div>
+             <div class="nav"> <a href="category.html" class="menu"></a>
+                <a href="login.html" class="user"></a>
+                 <a href="shoppingcart.html" class="cart"></a>
+                </div>
+                  </div>                    
+              
+                  <div data-role="navbar" data-iconpos="left" >
+                  <ul>
+                        <li>
+                            <a href="shoppingcart.html" data-transition="slide" data-theme="c" data-icon="check">购物车</a>
+                        </li>
+                        <li>
+                            <a href="orderconfirm.html" data-transition="slide" data-theme="c" data-icon="arrow-r" data-rel="back">提交订单</a>
+                        </li>
+                        <li>
+                            <a href="#" data-theme="c" data-icon="">填写发票信息</a>
+                        </li>
+                        <li>
+                            <a href="#" data-theme="c" data-icon="">&nbsp;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>    
+                    
+            <div data-role="content">
+             <ul data-role="listview" data-divider-theme="d" data-inset="true">
+                    <li data-role="list-divider" role="heading">是否需要发票 </li>
+                    <li data-theme="c">
+                       <fieldset data-role="controlgroup">
+	<legend></legend>
+     	<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+     	<label for="radio-choice-1">否
+</label>
+
+     	<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+     	<label for="radio-choice-2">个人
+</label>
+     	<input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3"  />
+     	<label for="radio-choice-3">公司
+</label><input type="text" id="company" name="company" class="required" placeholder="请填写发票抬头"  value="" />
+</fieldset>
+                    </li>     
+                   
+                     <li data-role="list-divider" role="heading">发票类型</li>
+                     <li data-theme="c">
+                         <fieldset data-role="controlgroup">
+	<legend></legend>
+     	<input type="radio" name="radio-choice-5" id="radio-choice-1" value="choice-1" checked="checked" />
+     	<label for="radio-choice-1">食品发票
+</label>
+
+     	<input type="radio" name="radio-choice-5" id="radio-choice-2" value="choice-2"  />
+     	<label for="radio-choice-2">办公用品
+</label>
+
+</fieldset>
+                    </li>
+                    </ul>
+           
+ <a href="orderconfirm.html" data-transition="slide" data-rel="back" data-role="button"  data-theme="a">
+                    确认保存
+                </a>
+    		</div>  
+             
+      <div data-role="footer" data-theme="c" class="p10">
+                 <div class="ui-grid-b" style="padding-bottom:5px;">
+                        <div class="ui-block-a">                           
+                                <a href="login.html" data-transition="fade">
+                                    登录
+                                </a>                           
+                        </div>
+                        <div class="ui-block-b">                            
+                                <a href="registration.html" data-transition="fade">
+                                    注册
+                                </a>                           
+                        </div>
+                          <div class="ui-block-c">                          
+                                <a href="" data-transition="fade">
+                                    电脑版
+                                </a>                            
+                        </div>
+                    </div>                    
+            <div><a href="#"  data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a></div>
             <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
             </div>
            

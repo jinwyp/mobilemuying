@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>商品列表</title>
+        <title></title>
         <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.1.0.min.css" />
         <link rel="stylesheet" href="style/my.css" />       
         <style>
@@ -14,12 +14,11 @@
     </head>
     <body>
         <!-- Home -->
-        <div data-role="page" id="productlist">
+        <div data-role="page" id="productlist" data-title="商品列表">
             <div data-role="header" data-theme="a" >
                <div class="header"> 
                <div class="logo"><a href=""><img src="images/logo.png"></a></div>
-             <div class="nav"> 
-             <a href="productlist.html" class="menu"></a>
+             <div class="nav"> <a href="category.html" class="menu"></a>
                 <a href="login.html" class="user"></a>
                  <a href="shoppingcart.html" class="cart"></a>
                 </div>
@@ -31,14 +30,11 @@
                             <a href="/" data-theme="c" data-icon="home">首页</a>
                         </li>
                         <li>
-                            <a href="productlist.html" data-theme="e" data-icon="grid" >全部分类</a>
+                            <a href="category.html#category" data-theme="c" data-icon="grid" >商品分类</a>
                         </li>
                         <li>
-                            <a href="productlist.html" data-theme="c" data-icon="grid">一级分类</a>
-                        </li>
-                        <li>
-                            <a href="productlist.html" data-theme="c" data-icon="grid">二级分类</a>
-                        </li>
+                            <a href="category.html#subcategory" data-theme="c" data-icon="grid" data-rel="back">三级分类</a>
+                        </li>                      
                     </ul>
                 </div>
             </div>    
