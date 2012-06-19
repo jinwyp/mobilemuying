@@ -737,7 +737,7 @@ a.ui-link-inherit {
 }
 		
 
-/*顶部导航*/
+/*nav*/
 .p10{padding:10px;text-align:center;}
 .header{padding:10px 10px 60px; }
 .logo{float:left;text-align:left;}
@@ -747,8 +747,12 @@ a.ui-link-inherit {
 .nav a.user{width:50px;background-position:-57px 0;}
 .nav a.cart{width:40px;background-position:-128px 0;}
 
-/*商品*/
+/*product*/
 .iteminfo fieldset{line-height:2em;}
 .ui-font-red{color:#e60000;}
 .ui-font-green{color:#82be0e;}
 .ui-font-bold{font-weight:bold;font-size:1.5em;}
+
+/*category*/
+
+
