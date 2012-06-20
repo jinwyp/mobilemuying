@@ -14,8 +14,8 @@
     </head>
     <body>
         <!-- registration -->
-		<div data-role="page" id="registration">
-			<div data-role="header" data-theme="a">
+		<div data-role="page" id="registration" data-title="注册">
+			<div data-role="header" data-theme="a" >
 				<div class="header">
 					<div class="logo">
 						<a href="">
@@ -148,7 +148,7 @@
 					<div data-role="fieldcontain">
 						<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" data-mini="true" />
 						<label for="checkbox-1">阅读并同意"母婴之家"网站 
-						<a href="#userpolicy" style="margin-left:10px;" data-transition="pop">用户协议</a></label>
+						<a href="#userpolicy" style="margin-left:10px;" data-transition="fade">用户协议</a></label>
 					</div>
 					<input data-theme="b" value="注册" type="submit" />
 				</form>
@@ -174,7 +174,7 @@
 
 
   <!-- userpolicy -->       
-		<div data-role="page" id="userpolicy">
+		<div data-role="page" id="userpolicy" data-title="母婴之家用户协议">
 			<div data-role="header" data-theme="a">
 				<div class="header">
 					<div class="logo">
@@ -214,15 +214,15 @@
 					<li>（四）您随时可以登录"购物车"，进入"个人资料"查看并修改您的注册信息。</li>
 					<li>（五）如果在使用中遇到程序问题或BUG，请给我们留言,我们会及时修正这些问题！谢谢支持！</li>
 				</ul>
-				<a href="#registration" data-transition="fade" data-role="button" data-icon="arrow-u" data-iconpos="left">同意该协议</a>
+				<a href="#registration" data-transition="fade" data-role="button" data-icon="arrow-u" data-iconpos="left" data-theme="b">同意该协议</a>
 			</div>
 			<div data-role="footer" data-theme="c" class="p10">
 				<div class="ui-grid-b" style="padding-bottom:5px;">
 					<div class="ui-block-a">
-						<a href="" data-transition="fade">登录</a>
+						<a href="login.html" data-transition="fade">登录</a>
 					</div>
 					<div class="ui-block-b">
-						<a href="" data-transition="fade">注册</a>
+						<a href="registration.html" data-transition="fade">注册</a>
 					</div>
 					<div class="ui-block-c">
 						<a href="" data-transition="fade">电脑版</a>
