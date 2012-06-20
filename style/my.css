@@ -755,4 +755,6 @@ a.ui-link-inherit {
 
 /*category*/
 
-
+.groupbuttonfullwidth a{
+	width:33%;
+}
