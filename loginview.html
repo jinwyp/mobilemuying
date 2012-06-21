@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />    
+		<title>登录</title>		
+        <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.1.0.min.css" />
+        <link rel="stylesheet" href="style/my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+
+
+    </head>
+    <body>
+
+
+<h4>Example 1 ---------------------------------------------</h4>
+<script type="text/x-handlebars">
+    The President of the United States is {{App.president.fullName}}.
+</script>
+<p><button id="btn1">TEST</button></p>
+
+
+<h4>Example 2: ---------------------------------------------</h4>
+<div id="temp-wrap" style="border: 3px solid #c22;width:300px;">
+    <!-- Insert into here -->
+</div>
+
+<script type="text/x-handlebars" data-template-name="info">
+    User: Albert Hofmann
+    <div>
+        <b>Posts:</b> 25
+        <br>
+        <b>Hobbies:</b> Riding bicycles
+    </div>
+</script>
+
+<h4>Example 3: ---------------------------------------------</h4>
+<p>Binding Test: <button id="btn2">TEST</button></p>
+
+<h4>Example 4: ---------------------------------------------</h4>
+<script type="text/x-handlebars">
+{{#view App.ClickableView}}
+    This is a clickable area!
+{{/view}}
+</script>
+
+<h4>Example 5: ---------------------------------------------</h4>
+<script type="text/x-handlebars">
+{{#view App.ListingView}}
+    <a href="#" {{action "edit" on="click"}}>Edit</a>
+{{/view}}
+</script>
+
+
+        
+        <script src="jquerymobile/jquery.min.js"></script>
+		<script src="js/ember-0.9.8.1.min.js"></script>   
+		<script src="js/myapp.js"></script>  
+    </body>
+</html>
