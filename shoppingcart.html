@@ -5,19 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title></title>
         <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.1.0.min.css" />
-        <link rel="stylesheet" href="style/my.css" />       
-        <style>
-            /* App custom styles */
-        </style>
-        <script src="jquerymobile/jquery.min.js"></script>
-        <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>               
+        <link rel="stylesheet" href="style/my.css" />            
     </head>
     <body>
-        <!-- Home -->
-        <div data-role="page" id="productlist" data-title="购物车">
+        <!-- shoppingcart -->
+        <div data-role="page" id="shoppingcart" data-title="购物车">
             <div data-role="header" data-theme="a" >
                <div class="header"> 
-               <div class="logo"><a href=""><img src="images/logo.png"></a></div>
+               <div class="logo"><a href=""><img src="images/logo.png" /></a></div>
              <div class="nav"> <a href="category.html" class="menu"></a>
                 <a href="myaccount.html" class="user"></a>
                  <a href="shoppingcart.html" class="cart"></a>
@@ -26,24 +21,20 @@
                   
                   <div data-role="navbar" data-iconpos="left" >
                   <ul>
+						<li>
+							<a href="index.html" data-theme="c" data-icon="home">首页</a>
+						</li>
                         <li>
                             <a href="#" data-theme="c" data-icon="check">购物车</a>
-                        </li>
-                        <li>
-                            <a href="#" data-theme="c" data-icon="">&nbsp;</a>
-                        </li>
-                        <li>
-                            <a href="#" data-theme="c" data-icon="">&nbsp;</a>
-                        </li>
-                        <li>
-                            <a href="#" data-theme="c" data-icon="">&nbsp;</a>
-                        </li>
+                        </li>                      
                     </ul>
                 </div>
-            </div>    
+            </div>   
+			
             <div data-role="navbar">
                 您共有<strong>2</strong>件商品
-                </div>                
+                </div>   
+				
             <div data-role="content">
         <div class="content-primary">        
         <ul data-role="listview" data-inset="true">
@@ -79,10 +70,9 @@
                     </div>                    
             <div><a href="#productlist"  data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a></div>
             <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
-            </div>
-           
+            </div>           
         </div>
-        <script>     
-        </script>
+		<script src="jquerymobile/jquery.min.js"></script>
+        <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>   
     </body>
 </html>

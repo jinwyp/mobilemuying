@@ -5,19 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title></title>
         <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.1.0.min.css" />
-        <link rel="stylesheet" href="style/my.css" />
-        <style>
-            /* App custom styles */
-        </style>
-        <script src="jquerymobile/jquery.min.js"></script>
-        <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>       
+        <link rel="stylesheet" href="style/my.css" />    
     </head>
     <body>
         <!-- registration -->
         <div data-role="page" id="registration" data-title="添加新的收货地址">
             <div data-role="header" data-theme="a" >
                <div class="header"> 
-               <div class="logo"><a href=""><img src="images/logo.png"></a></div>
+               <div class="logo"><a href=""><img src="images/logo.png" /></a></div>
              <div class="nav"> <a href="category.html" class="menu"></a>
                 <a href="myaccount.html" class="user"></a>
                  <a href="shoppingcart.html" class="cart"></a>
@@ -33,11 +28,9 @@
                             <a href="orderconfirm.html" data-transition="slide" data-theme="c" data-icon="arrow-r">提交订单</a>
                         </li>
                         <li>
-                            <a href="addresslist.html" data-transition="slide"  data-rel="back" data-theme="c" data-icon="arrow-r">选择收货地址</a>
+                            <a href="addresslist.html" data-transition="slide"  data-rel="back" data-theme="e" data-icon="arrow-r">选择收货地址</a>
                         </li>
-                        <li>
-                            <a href="#" data-theme="c" data-icon="">添加新的收货地址</a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -57,67 +50,67 @@
 
 <label for="select-choice-year">省份</label>
 <select name="select-choice-year" id="select-choice-year">
-	<option>省份</option>
-    <option value="2013">2013</option>
-    <option value="2012">2012</option>
-	<option value="2011">2011</option>
-    <option value="2010">2010</option>
-    <option value="2009">2009</option>
-    <option value="2008">2008</option>
-    <option value="2007">2007</option>		
+<option value="1">北京市</option>
+<option value="2">天津市</option>
+<option value="3">河北省</option>
+<option value="4">山西省</option>
+<option value="5">内蒙古自治区</option>
+<option value="6">辽宁省</option>
+<option value="7">吉林省</option>
+<option value="8">黑龙江省</option>
+<option value="9" selected="selected">上海市</option>
+<option value="10">江苏省</option>
+<option value="11">浙江省</option>
+<option value="12">安徽省</option>
+<option value="13">福建省</option>
+<option value="14">江西省</option>
+<option value="15">山东省</option>
+<option value="16">河南省</option>
+<option value="17">湖北省</option>
+<option value="18">湖南省</option>
+<option value="19">广东省</option>
+<option value="20">广西壮族自治区</option>
+<option value="22">重庆市</option>
+<option value="23">四川省</option>
+<option value="24">贵州省</option>
+<option value="25">云南省</option>
+<option value="26">西藏自治区</option>
+<option value="27">陕西省</option>
+<option value="28">甘肃省</option>
+<option value="29">青海省</option>
+<option value="30">宁夏回族自治区</option>
+<option value="31">新疆维吾尔自治区</option>
+<option value="32">台湾省</option>
+<option value="33">香港特别行政区</option>
+<option value="34">海南省</option>		
 </select>
 
     <label for="select-choice-month">城市</label>
 <select name="select-choice-month" id="select-choice-month">
-	<option>城市</option>
-	<option value="1">1</option>
-	<option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-    <option value="8">8</option>
-    <option value="9">9</option>
-    <option value="10">10</option>
-    <option value="10">10</option>
-    <option value="12">12</option>   
+<option value="21" selected="selected">上海市</option>
 </select>
 
 	<label for="select-choice-day">区县</label>
 <select name="select-choice-day" id="select-choice-day">
-	<option>区县</option>
-	<option value="1">1</option>
-	<option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-    <option value="8">8</option>
-    <option value="9">9</option>
-    <option value="10">10</option>
-    <option value="10">10</option>
-    <option value="12">12</option>
-    <option value="13">13</option>
-    <option value="14">14</option>
-    <option value="15">15</option>
-	<option value="16">16</option>
-    <option value="17">17</option>
-    <option value="18">18</option>
-    <option value="19">19</option>
-    <option value="20">20</option>
-    <option value="21">21</option>
-    <option value="22">22</option>
-    <option value="23">23</option>
-    <option value="24">24</option>
-    <option value="25">25</option>
-    <option value="26">26</option>
-    <option value="27">27</option>
-    <option value="28">28</option>	
-    <option value="29">29</option>
-    <option value="30">30</option>
-    <option value="31">31</option>	
+<option value="895">金山区</option>
+<option value="899">奉贤区</option>
+<option value="901">崇明县</option>
+<option value="12316">宝山区</option>
+<option value="12317">长宁区</option>
+<option value="12318">虹口区</option>
+<option value="12319">黄浦区</option>
+<option value="12320">嘉定区</option>
+<option value="12321">静安区</option>
+<option value="12322">卢湾区</option>
+<option value="12323">闵行区</option>
+<option value="12324">南汇区</option>
+<option value="12325">浦东新区</option>
+<option value="12326" selected="selected">普陀区</option>
+<option value="12327">青浦区</option>
+<option value="12328">松江区</option>
+<option value="12329">徐汇区</option>
+<option value="12330">杨浦区</option>
+<option value="12331">闸北区</option>
 </select>
 </fieldset>
 </div>
@@ -181,7 +174,7 @@
                                 </a>                           
                         </div>
                           <div class="ui-block-c">                          
-                                <a href="" data-transition="fade">
+                                <a href="http://www.muyingzhijia.com" data-transition="fade">
                                     电脑版
                                 </a>                            
                         </div>
@@ -191,7 +184,7 @@
             </div>           
         </div>
 
-        <script>     
-        </script>
+		<script src="jquerymobile/jquery.min.js"></script>
+        <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>       
     </body>
 </html>

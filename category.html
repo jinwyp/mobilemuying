@@ -5,212 +5,293 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title></title>
         <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.1.0.min.css" />
-        <link rel="stylesheet" href="style/my.css" />       
-        <style>
-            /* App custom styles */
-        </style>
-        <script src="jquerymobile/jquery.min.js"></script>
-        <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>               
+        <link rel="stylesheet" href="style/my.css" />             
     </head>
     <body>
         <!-- category -->
-        <div data-role="page" id="category" data-title="商品列表">
-            <div data-role="header" data-theme="a" >
-               <div class="header"> 
-               <div class="logo"><a href=""><img src="images/logo.png"></a></div>
-             <div class="nav"> <a href="category.html" class="menu"></a>
-                <a href="myaccount.html" class="user"></a>
-                 <a href="shoppingcart.html" class="cart"></a>
-                </div>
-                  </div>  
-                  
-                  <div data-role="navbar" data-iconpos="left" >
-                  <ul>
-                        <li>
-                            <a href="/" data-theme="c" data-icon="home">首页</a>
-                        </li>                     
-                        <li>
-                            <a href="" data-theme="e" data-icon="grid">商品分类</a>
-                        </li>                      
-                    </ul>
-                </div>
-            </div>      
+		<div data-role="page" id="category" data-title="商品分类">
+			<div data-role="header" data-theme="a">
+				<div class="header">
+					<div class="logo">
+						<a href="">
+							<img src="images/logo.png" />
+						</a>
+					</div>
+					<div class="nav">
+						<a href="category.html" class="menu"></a>
+						<a href="myaccount.html" class="user"></a>
+						<a href="shoppingcart.html" class="cart"></a>
+					</div>
+				</div>
+				<div data-role="navbar" data-iconpos="left">
+					<ul>
+						<li>
+							<a href="index.html" data-theme="c" data-icon="home">首页</a>
+						</li>
+						<li>
+							<a href="category.html" data-theme="e" data-icon="grid">商品分类</a>
+						</li>
+					</ul>
+				</div>
+			</div>		    
                 
-            <div data-role="content">
-        <div class="content-primary">        
-    <div data-role="collapsible-set" data-theme="e" data-content-theme="c" >
-    	<div data-role="collapsible" data-collapsed="false" >
-		<h3>妈妈专区</h3>   
-        <ul data-role="listview">    
-        <li><a href="#subcategory" data-transition="slide">妈妈食品</a></li>
-        <li><a href="#subcategory" data-transition="slide">母乳喂养用品</a></li>
-        <li><a href="#subcategory" data-transition="slide">妈妈服饰</a></li>
-        <li><a href="#subcategory" data-transition="slide">妈妈洗护</a></li> 
-        <li><a href="#subcategory" data-transition="slide">祛纹纤体</a></li>
-        <li><a href="#subcategory" data-transition="slide">妈妈书籍</a></li>  
-        </ul>       
-		</div>  	  	
-
-		<div data-role="collapsible" data-collapsed="false"> 
-		<h3>宝宝食品</h3>
-	      <ul data-role="listview">    
-        <li><a href="#subcategory" data-transition="slide">牛奶粉</a></li>
-        <li><a href="#subcategory" data-transition="slide">特殊配方奶粉</a></li>
-        <li><a href="#subcategory" data-transition="slide">羊奶粉</a></li>
-        <li><a href="#subcategory" data-transition="slide">营养保健</a></li> 
-        <li><a href="#subcategory" data-transition="slide">辅食</a></li>        
-        </ul>   
+		<div data-role="content">
+			<div class="content-primary">
+				<div data-role="collapsible-set" data-theme="e" data-content-theme="c">
+					<div data-role="collapsible" data-collapsed="false">
+						<h3>妈妈专区</h3>
+						<ul data-role="listview">
+							<li>
+								<a href="#subcategory" data-transition="slide">妈妈食品</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">母乳喂养用品</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">妈妈服饰</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">妈妈洗护</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">祛纹纤体</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">妈妈书籍</a>
+							</li>
+						</ul>
+					</div>
+					<div data-role="collapsible" data-collapsed="false">
+						<h3>宝宝食品</h3>
+						<ul data-role="listview">
+							<li>
+								<a href="#subcategory" data-transition="slide">牛奶粉</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">特殊配方奶粉</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">羊奶粉</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">营养保健</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">辅食</a>
+							</li>
+						</ul>
+					</div>
+					<div data-role="collapsible" data-collapsed="false">
+						<h3>哺育喂养</h3>
+						<ul data-role="listview">
+							<li>
+								<a href="#subcategory" data-transition="slide">奶瓶/奶嘴</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">安抚奶嘴</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">餐具</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">学饮杯</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">消毒/加温</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">辅食加工器具</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">辅助工具</a>
+							</li>
+						</ul>
+					</div>
+					<div data-role="collapsible" data-collapsed="false">
+						<h3>宝宝用品</h3>
+						<ul data-role="listview">
+							<li>
+								<a href="#subcategory" data-transition="slide">纸尿裤/防尿用品</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">洗浴</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">护扶</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">护理</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">安全防护</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">清洁/入厕用品</a>
+							</li>
+						</ul>
+					</div>
+					<div data-role="collapsible" data-collapsed="false">
+						<h3>宝宝服饰</h3>
+						<ul data-role="listview">
+							<li>
+								<a href="#subcategory" data-transition="slide">内衣</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">外出服</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">鞋袜帽</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">配件</a>
+							</li>
+						</ul>
+					</div>
+					<div data-role="collapsible" data-collapsed="false">
+						<h3>玩具图书音像</h3>
+						<ul data-role="listview">
+							<li>
+								<a href="#subcategory" data-transition="slide">玩具</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">图书音像</a>
+							</li>
+						</ul>
+					</div>
+					<div data-role="collapsible" data-collapsed="false">
+						<h3>车床椅/寝具</h3>
+						<ul data-role="listview">
+							<li>
+								<a href="#subcategory" data-transition="slide">安全汽座</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">童车</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">童床</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">餐椅/摇椅</a>
+							</li>
+							<li>
+								<a href="#subcategory" data-transition="slide">寝具</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
-        
-        <div data-role="collapsible" data-collapsed="false">
-		<h3>哺育喂养</h3>       
-         <ul data-role="listview">    
-        <li><a href="#subcategory" data-transition="slide">奶瓶/奶嘴</a></li>
-        <li><a href="#subcategory" data-transition="slide">安抚奶嘴</a></li>
-        <li><a href="#subcategory" data-transition="slide">餐具</a></li>
-        <li><a href="#subcategory" data-transition="slide">学饮杯</a></li> 
-        <li><a href="#subcategory" data-transition="slide">消毒/加温</a></li>
-        <li><a href="#subcategory" data-transition="slide">辅食加工器具</a></li>
-        <li><a href="#subcategory" data-transition="slide">辅助工具</a></li>    
-        </ul>           
-		</div>  	  	
-
-		<div data-role="collapsible" data-collapsed="false"> 
-		<h3>宝宝用品</h3>
-	     <ul data-role="listview">    
-        <li><a href="#subcategory" data-transition="slide">纸尿裤/防尿用品</a></li>
-        <li><a href="#subcategory" data-transition="slide">洗浴</a></li>
-        <li><a href="#subcategory" data-transition="slide">护扶</a></li>
-        <li><a href="#subcategory" data-transition="slide">护理</a></li> 
-        <li><a href="#subcategory" data-transition="slide">安全防护</a></li>
-        <li><a href="#subcategory" data-transition="slide">清洁/入厕用品</a></li>  
-        </ul>      
-		</div>
-        <div data-role="collapsible" data-collapsed="false">
-		<h3>宝宝服饰</h3>       
-        <ul data-role="listview">    
-        <li><a href="#subcategory" data-transition="slide">内衣</a></li>
-        <li><a href="#subcategory" data-transition="slide">外出服</a></li> 
-        <li><a href="#subcategory" data-transition="slide">鞋袜帽</a></li>
-        <li><a href="#subcategory" data-transition="slide">配件</a></li> 
-        </ul>           
-		</div>  	  	
-
-		<div data-role="collapsible" data-collapsed="false"> 
-		<h3>玩具图书音像</h3>
-	   <ul data-role="listview">    
-        <li><a href="#subcategory" data-transition="slide">玩具</a></li>
-        <li><a href="#subcategory" data-transition="slide">图书音像</a></li> 
-        </ul>    
-		</div>
-        <div data-role="collapsible" data-collapsed="false">
-		<h3>车床椅/寝具</h3>       
-       <ul data-role="listview">    
-        <li><a href="#subcategory" data-transition="slide">安全汽座</a></li>
-        <li><a href="#subcategory" data-transition="slide">童车</a></li> 
-        <li><a href="#subcategory" data-transition="slide">童床</a></li>
-        <li><a href="#subcategory" data-transition="slide">餐椅/摇椅</a></li> 
-        <li><a href="#subcategory" data-transition="slide">寝具</a></li>     
-        </ul>           
-		</div>	
-    </div>            
-    </div>                   
-    </div>  
              
-      <div data-role="footer" data-theme="c" class="p10">
-                 <div class="ui-grid-b" style="padding-bottom:5px;">
-                        <div class="ui-block-a">                           
-                                <a href="login.html" data-transition="fade">
-                                    登录
-                                </a>                           
-                        </div>
-                        <div class="ui-block-b">                            
-                                <a href="registration.html" data-transition="fade">
-                                    注册
-                                </a>                           
-                        </div>
-                          <div class="ui-block-c">                          
-                                <a href="" data-transition="fade">
-                                    电脑版
-                                </a>                            
-                        </div>
-                    </div>                    
-            <div><a href="#productlist"  data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a></div>
-            <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
-            </div>
-           
-        </div>
+		<div data-role="footer" data-theme="c" class="p10">
+			<div class="ui-grid-b" style="padding-bottom:5px;">
+				<div class="ui-block-a">
+					<a href="login.html" data-transition="fade">登录</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="registration.html" data-transition="fade">注册</a>
+				</div>
+				<div class="ui-block-c">
+					<a href="http://www.muyingzhijia.com" data-transition="fade">电脑版</a>
+				</div>
+			</div>
+			<div>
+				<a href="#productlist" data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a>
+			</div>
+			<div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
+		</div>           
+	
         
         
 <!-- subcategory -->
-        <div data-role="page" id="subcategory" data-title="商品列表">
-            <div data-role="header" data-theme="a" >
-               <div class="header"> 
-               <div class="logo"><a href=""><img src="images/logo.png"></a></div>
-             <div class="nav"> <a href="category.html" class="menu"></a>
-                <a href="myaccount.html" class="user"></a>
-                 <a href="shoppingcart.html" class="cart"></a>
-                </div>
-                  </div>  
-                  
-                  <div data-role="navbar" data-iconpos="left" >
-                  <ul>
-                        <li>
-                            <a href="/" data-theme="c" data-icon="home">首页</a>
-                        </li>                       
-                        <li>
-                            <a href="#category" data-theme="c" data-icon="grid" data-rel="back">商品分类</a>
-                        </li>
-                        <li>
-                            <a href="" data-theme="e" data-icon="grid">三级分类</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>      
-                
-            <div data-role="content">
-        <div class="content-primary"> 
-        <ul data-role="listview"  data-theme="c">    
-        <li><a href="productlist.html" data-transition="slide">孕妇奶粉</a></li>
-        <li><a href="productlist.html" data-transition="slide">叶酸</a></li> 
-        <li><a href="productlist.html" data-transition="slide">孕妇奶粉</a></li>
-        <li><a href="productlist.html" data-transition="slide">叶酸</a></li> 
-        <li><a href="productlist.html" data-transition="slide">孕妇奶粉</a></li>
-        <li><a href="productlist.html" data-transition="slide">叶酸</a></li> 
-        <li><a href="productlist.html" data-transition="slide">孕妇奶粉</a></li>
-        <li><a href="productlist.html" data-transition="slide">叶酸</a></li> 
-        <li><a href="productlist.html" data-transition="slide">孕妇奶粉</a></li>
-        <li><a href="productlist.html" data-transition="slide">叶酸</a></li> 
-        <li><a href="productlist.html" data-transition="slide">孕妇奶粉</a></li>
-        <li><a href="productlist.html" data-transition="slide">叶酸</a></li> 
-        </ul>   
-    </div>                   
-    </div>  
-             
-      <div data-role="footer" data-theme="c" class="p10">
-                 <div class="ui-grid-b" style="padding-bottom:5px;">
-                        <div class="ui-block-a">                           
-                                <a href="login.html" data-transition="fade">
-                                    登录
-                                </a>                           
-                        </div>
-                        <div class="ui-block-b">                            
-                                <a href="registration.html" data-transition="fade">
-                                    注册
-                                </a>                           
-                        </div>
-                          <div class="ui-block-c">                          
-                                <a href="" data-transition="fade">
-                                    电脑版
-                                </a>                            
-                        </div>
-                    </div>                    
-            <div><a href="#productlist"  data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a></div>
-            <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
-            </div>
-           
-        </div>
-        <script>     
-        </script>
+	<div data-role="page" id="subcategory" data-title="商品二级分类">
+		<div data-role="header" data-theme="a">
+			<div class="header">
+				<div class="logo">
+					<a href="">
+						<img src="images/logo.png" />
+					</a>
+				</div>
+				<div class="nav">
+					<a href="category.html" class="menu"></a>
+					<a href="myaccount.html" class="user"></a>
+					<a href="shoppingcart.html" class="cart"></a>
+				</div>
+			</div>
+			<div data-role="navbar" data-iconpos="left">
+				<ul>
+					<li>
+						<a href="index.html" data-theme="c" data-icon="home">首页</a>
+					</li>
+					<li>
+						<a href="#category" data-theme="c" data-icon="grid" data-rel="back">商品分类</a>
+					</li>
+					<li>
+						<a href="" data-theme="e" data-icon="grid">妈妈食品</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content">
+			<div class="content-primary">
+				<ul data-role="listview" data-theme="c">
+					<li>
+						<a href="productlist.html" data-transition="slide">孕妇奶粉</a>
+					</li>
+					<li>
+						<a href="productlist.html" data-transition="slide">叶酸</a>
+					</li>
+					<li>
+						<a href="productlist.html" data-transition="slide">孕妇奶粉</a>
+					</li>
+					<li>
+						<a href="productlist.html" data-transition="slide">叶酸</a>
+					</li>
+					<li>
+						<a href="productlist.html" data-transition="slide">孕妇奶粉</a>
+					</li>
+					<li>
+						<a href="productlist.html" data-transition="slide">叶酸</a>
+					</li>
+					<li>
+						<a href="productlist.html" data-transition="slide">孕妇奶粉</a>
+					</li>
+					<li>
+						<a href="productlist.html" data-transition="slide">叶酸</a>
+					</li>
+					<li>
+						<a href="productlist.html" data-transition="slide">孕妇奶粉</a>
+					</li>
+					<li>
+						<a href="productlist.html" data-transition="slide">叶酸</a>
+					</li>
+					<li>
+						<a href="productlist.html" data-transition="slide">孕妇奶粉</a>
+					</li>
+					<li>
+						<a href="productlist.html" data-transition="slide">叶酸</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="footer" data-theme="c" class="p10">
+			<div class="ui-grid-b" style="padding-bottom:5px;">
+				<div class="ui-block-a">
+					<a href="login.html" data-transition="fade">登录</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="registration.html" data-transition="fade">注册</a>
+				</div>
+				<div class="ui-block-c">
+					<a href="http://www.muyingzhijia.com" data-transition="fade">电脑版</a>
+				</div>
+			</div>
+			<div>
+				<a href="#productlist" data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a>
+			</div>
+			<div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
+		</div>
+	</div>
+		<script src="jquerymobile/jquery.min.js"></script>
+        <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>  
     </body>
 </html>
