@@ -11,62 +11,90 @@
     </head>
     <body>
 
-	
-<div id="container">
-<script type="text/x-handlebars">
-      Hello, <b>{{view App.ReviewTextArea}}</b>
- </script>
+
+    <div>
+        <script type="text/x-handlebars">
+            My songs have {{Songs.totalReviews}} reviews.
+        </script>
+
+        <script type="text/x-handlebars">
+            {{#each Songs.songsController}}
+            <h3>{{title}}</h3>
+
+            <p>{{artist}} - {{genre}}</p>
+            {{/each}}
+        </script>
 
 
-<script type="text/x-handlebars"> 
-	{{#each App.PeopleView.people}} 
-		<h3>{{name}}</h3> 
-	{{/each}} 
-</script>
-</div>
-	
-<h4>Example 1 ---------------------------------------------</h4>
-<script type="text/x-handlebars">
-    The President of the United States is {{App.president.fullName}}.
-</script>
-<p><button id="btn1">TEST</button></p>
+        <script type="text/x-handlebars">
+            Hello, <b>{{view App.ReviewTextArea}}</b>
+        </script>
+        <h4>---------------------------------------------</h4>
+    </div>
 
+    <div id="container">
 
-<h4>Example 2: ---------------------------------------------</h4>
+        <script type="text/x-handlebars">
+            {{#each App.PeopleView.people}}
+            <h3>{{name}}</h3>
+            {{/each}}
+        </script>
+    </div>
 
-<div id="temp11" style="border: 3px solid #c22;width:300px;">
-    <!-- Insert into here -->
+    <h4>Example 1 ---------------------------------------------</h4>
     <script type="text/x-handlebars">
-        User: Albert Hofmann {{App.president.fullName}}
-        <div>
-            <b>Posts:</b> {{posts}}
-            <br>
-            <b>Hobbies:</b> {{info1.posts}}
-        </div>
+        The President of the United States is {{App.president.fullName}}.
+    </script>
+    <p>
+        <button id="btn1">TEST</button>
+    </p>
+
+
+    <h4>Example 2: ---------------------------------------------</h4>
+
+
+    <div id="temp11" style="border: 3px solid #c22;width:300px;">
+        <!-- Insert into here -->
+        <script type="text/x-handlebars">
+            User: Albert Hofmann {{App.president.fullName}}
+            <div>
+                <b>Posts:</b> {{posts}}
+                <br>
+                <b>Hobbies:</b> {{info1.posts}}
+            </div>
+        </script>
+    </div>
+
+    <p>
+        <button id="btn22">TEST</button>
+    </p>
+
+    <h4>Example 3: ---------------------------------------------</h4>
+
+    <p>Binding Test:
+        <button id="btn2">TEST</button>
+    </p>
+
+    <h4>Example 4: ---------------------------------------------</h4>
+    <script type="text/x-handlebars">
+        {{#view App.ClickableView}}
+        This is a clickable area!
+        {{/view}}
     </script>
 
-</div>
+    <h4>Example 5: ---------------------------------------------</h4>
+    <script type="text/x-handlebars">
+        {{#view App.ListingView}}
+        <a href="#" {{action "edit" on="click"}}>Edit</a>
+        {{/view}}
+    </script>
 
-<p><button id="btn22">TEST</button>
-</p>
 
-<h4>Example 3: ---------------------------------------------</h4>
-<p>Binding Test: <button id="btn2">TEST</button></p>
-
-<h4>Example 4: ---------------------------------------------</h4>
-<script type="text/x-handlebars">
-{{#view App.ClickableView}}
-    This is a clickable area!
-{{/view}}
-</script>
-
-<h4>Example 5: ---------------------------------------------</h4>
-<script type="text/x-handlebars">
-{{#view App.ListingView}}
-    <a href="#" {{action "edit" on="click"}}>Edit</a>
-{{/view}}
-</script>
-
+    <div id="logo">
+        <script type="text/x-handlebars">
+        <img {{bindAttr ="App.LogoView.logoUrl"}} alt="Logo">
+        </script>
+    </div>
 
         
         <script src="jquerymobile/jquery.min.js"></script>

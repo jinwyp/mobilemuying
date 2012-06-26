@@ -9,10 +9,65 @@
 
 
 
+Songs = Ember.Application.create({
+    mixmaster: 'Andy',
+    totalReviews: 0,
+    ready: function(){
+        //alert('Ember sings helloooooooooo!');
+    }
+});
+
+Songs.Song = Ember.Object.extend({
+    title: null,
+    artist: null,
+    genre: null,
+    listens: 0
+});
+
+var mySong = Songs.Song.create({
+    title: 'Son of the Morning',
+    artist: 'Oh, Sleeper',
+    genre: 'Screamo'
+});
+console.log(mySong.genre);
+
+
+Songs.ReviewTextArea = Ember.TextArea.extend({
+    placeholder: 'Enter your review'
+});
+
+
+Songs.songsController = Ember.ArrayController.create({
+    content: [],
+    init: function(){
+        this._super();
+        var song = Songs.Song.create({
+            title: 'Son of the Morning',
+            artist: 'Oh, Sleeper',
+            genre: 'Screamo'
+        });
+        this.pushObject(song);
+    }
+});
+console.log(Songs.songsController.content);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // add a namespace
 var App = Ember.Application.create({
 	mixmaster: 'Andy', 
-	totalReviews: 0, 
+	totalReviews: 0
 
 });
 
@@ -41,9 +96,6 @@ $('#btn1').click( function() {
 	App.president.firstName = 1;
 	console.log(App.president.name); 
 });
-$('#btn1').click(function){
-
-}
 
 // Example 2
 App.InfoView = Ember.View.extend({
@@ -92,3 +144,6 @@ App.ListingView = Ember.View.extend({
     }
 });
 
+App.LogoView = Ember.View.extend({
+    logoUrl: 'http://www.mycorp.com/images/logo.png'
+});
