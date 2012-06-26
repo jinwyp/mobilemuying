@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title></title>
+        <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.1.0.min.css" />
+        <link rel="stylesheet" href="style/my.css" />          
+    </head>
+    <body>
+        <!--orderdetail -->
+		<div data-role="page" id="orderdetail" data-title="订单详情">
+			<div data-role="header" data-theme="a">
+				<div class="header">
+					<div class="logo">
+						<a href="index.html"> <img src="images/logo.png" />
+						</a>
+					</div>
+					<div class="nav">
+						<a href="category.html" class="menu"></a>
+						<a href="myaccount.html" class="user"></a>
+						<a href="shoppingcart.html" class="cart"></a>
+					</div>
+				</div>
+				<div data-role="navbar" data-iconpos="left">
+					<ul>
+                        <li>
+                            <a href="index.html" data-theme="c" data-icon="home">首页</a>
+                        </li>
+						<li>
+							<a href="myaccount.html" data-theme="c" data-icon="grid">个人中心</a>
+						</li>
+						<li>
+							<a href="orderlist.html.html" data-theme="e" data-icon="grid">订单中心</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+				<div data-role="controlgroup" data-type="horizontal">
+					<a href="orderlist.html#recent" data-theme="e" data-role="button" data-icon="arrow-d" data-mini="true" data-transition="slide" data-rel="back">近一个月订单</a>
+					<a href="orderlist.html#before" data-theme="c" data-role="button" data-icon="arrow-d" data-mini="true" data-transition="slide" data-rel="back">一个月以前订单</a>
+				</div>
+				<div class="content-primary">
+	                <ul data-role="listview" data-inset="true" data-divider-theme="d">
+                        <li data-role="list-divider">订单5373753信息</li>
+                        <li>
+                            <p>收货人：王宇鹏</p>
+                            <p>收货地址：上海市普陀区， 澳门路519弄华生大厦1号楼7楼</p>
+                            <p>邮编：200060</p>
+                            <p>电话：13564568304</p>
+                        </li>
+                        <li>送货方式：<strong>母婴之家快递</strong></li>
+                        <li>
+                            <p>发票类型：食品发票</p>
+                            <p>发票抬头：公司 宜家中国</p>
+                        </li>
+                        <li data-role="list-divider">订单商品列表</li>
+                        <li>
+                            <a href="productdetailinfo.html">
+                                <img src="http://img.muyingzhijia.com/product/normal/66158_01_01.jpg" />
+                                <p>商品编号：<strong>119902</strong></p>
+                                <p>名称：<strong>商品名称商品名称商品名称22</strong></p>
+                                <p>单价：<strong>￥212.00</strong></p>
+                                <p>数量：<strong>1</strong></p>
+                                <p>小计：<strong class="ui-font-red">￥212.00</strong></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="productdetailinfo.html">
+                                <img src="http://img.muyingzhijia.com/product/normal/66158_01_01.jpg" />
+                                <p>商品编号：<strong>119902</strong></p>
+                                <p>名称：<strong>商品名称商品名称商品名称22</strong></p>
+                                <p>单价：<strong>￥212.00</strong></p>
+                                <p>数量：<strong>1</strong></p>
+                                <p>小计：<strong class="ui-font-red">￥212.00</strong></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="productdetailinfo.html">
+                                <img src="http://img.muyingzhijia.com/product/normal/66158_01_01.jpg" />
+                                <p>商品编号：<strong>119902</strong></p>
+                                <p>名称：<strong>商品名称商品名称商品名称22</strong></p>
+                                <p>单价：<strong>￥212.00</strong></p>
+                                <p>数量：<strong>1</strong></p>
+                                <p>小计：<strong class="ui-font-red">￥212.00</strong></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="productdetailinfo.html">
+                                <img src="http://img.muyingzhijia.com/product/normal/66158_01_01.jpg" />
+                                <p>商品编号：<strong>119902</strong></p>
+                                <p>名称：<strong>商品名称商品名称商品名称22</strong></p>
+                                <p>单价：<strong>￥212.00</strong></p>
+                                <p>数量：<strong>1</strong></p>
+                                <p>小计：<strong class="ui-font-red">￥212.00</strong></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="productdetailinfo.html">
+                                <img src="http://img.muyingzhijia.com/product/normal/66158_01_01.jpg" />
+                                <p>商品编号：<strong>119902</strong></p>
+                                <p>名称：<strong>商品名称商品名称商品名称22</strong></p>
+                                <p>单价：<strong>￥212.00</strong></p>
+                                <p>数量：<strong>1</strong></p>
+                                <p>小计：<strong class="ui-font-red">￥212.00</strong></p>
+                            </a>
+                        </li>
+                        <li data-icon="arrow-l" data-iconpos="left" >
+                            <a href="orderlist.html" data-transition="slide"  data-rel="back">返回</a>
+                        </li>
+					</ul>
+                    <div><a href="onlinepayment.html" data-role="button" data-inline="true" data-theme="e" >在线支付</a><a href="#" data-role="button" data-inline="true" data-mini="true">取消订单</a></div>
+				</div>
+			</div>
+			<div data-role="footer" data-theme="c" class="p10">
+				<div class="ui-grid-b" style="padding-bottom:5px;">
+					<div class="ui-block-a">
+						<a href="login.html" data-transition="fade">登录</a>
+					</div>
+					<div class="ui-block-b">
+						<a href="registration.html" data-transition="fade">注册</a>
+					</div>
+					<div class="ui-block-c">
+						<a href="http://www.muyingzhijia.com" data-transition="fade">电脑版</a>
+					</div>
+				</div>
+				<div>
+					<a href="#productlist" data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a>
+				</div>
+				<div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
+			</div>
+		</div>
+
+		<script src="jquerymobile/jquery.min.js"></script>
+        <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>     
+    </body>
+</html>

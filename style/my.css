@@ -738,6 +738,7 @@ a.ui-link-inherit {
 		
 
 /*nav*/
+p{line-height: 2em;}
 .p10{padding:10px;text-align:center;}
 .header{padding:10px 10px 60px; }
 .logo{float:left;text-align:left;}
@@ -754,7 +755,6 @@ a.ui-link-inherit {
 .ui-font-bold{font-weight:bold;font-size:1.5em;}
 
 /*category*/
-
 .groupbuttonfullwidth a{
 	width:33%;
 }
