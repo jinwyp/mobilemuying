@@ -41,7 +41,9 @@ $('#btn1').click( function() {
 	App.president.firstName = 1;
 	console.log(App.president.name); 
 });
+$('#btn1').click(function){
 
+}
 
 // Example 2
 App.InfoView = Ember.View.extend({
