@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="style/my.css" />          
     </head>
     <body>
-        <!-- productlist -->
-		<div data-role="page" id="productlist" data-title="商品列表">
+        <!-- sales -->
+		<div data-role="page" id="sales" data-title="商品列表">
 			<div data-role="header" data-theme="a">
 				<div class="header">
 					<div class="logo">
@@ -47,15 +47,7 @@
 						<li>
 							<a href="productdetailinfo.html">
 								<img src="http://img.muyingzhijia.com/product/normal/66158_01_01.jpg" />
-								<h3>商品名称商品名称商品名称11</h3>
-								<p>价格：
-								<strong class="ui-font-red">￥212.00</strong></p>
-							</a>
-						</li>
-						<li>
-							<a href="productdetailinfo.html">
-								<img src="http://img.muyingzhijia.com/product/normal/66158_01_01.jpg" />
-								<h3>商品名称商品名称商品名称22</h3>
+								<h3>按销售排序商品名称22</h3>
 								<p>价格：
 								<strong class="ui-font-red">￥212.00</strong></p>
 							</a>
@@ -63,7 +55,7 @@
 						<li>
 							<a href="productdetailinfo.html">
 								<img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" />
-								<h3>商品名称商品名称商品名称33</h3>
+								<h3>按销售排序商品名称33</h3>
 								<p>价格：
 								<strong class="ui-font-red">￥212.00</strong></p>
 							</a>
@@ -71,7 +63,7 @@
 						<li>
 							<a href="productdetailinfo.html">
 								<img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" />
-								<h3>商品名称商品名称商品名称44</h3>
+								<h3>按销售排序商品名称44</h3>
 								<p>价格：
 								<strong class="ui-font-red">￥212.00</strong></p>
 							</a>
@@ -79,7 +71,7 @@
 						<li>
 							<a href="productdetailinfo.html">
 								<img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" />
-								<h3>商品名称商品名称商品名称55</h3>
+								<h3>按销售排序商品名称55</h3>
 								<p>价格：
 								<strong class="ui-font-red">￥212.00</strong></p>
 							</a>
@@ -87,7 +79,7 @@
 						<li>
 							<a href="productdetailinfo.html">
 								<img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" />
-								<h3>商品名称商品名称商品66名称</h3>
+								<h3>按销售排序商品名称66</h3>
 								<p>价格：
 								<strong class="ui-font-red">￥212.00</strong></p>
 							</a>
@@ -114,7 +106,203 @@
 			</div>
 		</div>
 
-		<script src="jquerymobile/jquery.min.js"></script>
+        <!-- price -->
+        <div data-role="page" id="price" data-title="商品列表">
+            <div data-role="header" data-theme="a">
+                <div class="header">
+                    <div class="logo">
+                        <a href="index.html"> <img src="images/logo.png" />
+                        </a>
+                    </div>
+                    <div class="nav">
+                        <a href="category.html" class="menu"></a>
+                        <a href="myaccount.html" class="user"></a>
+                        <a href="shoppingcart.html" class="cart"></a>
+                    </div>
+                </div>
+                <div data-role="navbar" data-iconpos="left">
+                    <ul>
+                        <li>
+                            <a href="category.html#category" data-theme="c" data-icon="grid">商品分类</a>
+                        </li>
+                        <li>
+                            <a href="category.html#subcategory" data-theme="c" data-icon="grid" data-rel="back">妈妈食品</a>
+                        </li>
+                        <li>
+                            <a href="#" data-theme="e" data-icon="grid">孕妇奶粉</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content">
+                <div data-role="controlgroup" data-type="horizontal" class="groupbuttonfullwidth">
+                    <a href="#sales" data-theme="c" data-role="button" data-icon="arrow-d" data-mini="true" data-transition="slide">销量</a>
+                    <a href="#price" data-theme="e" data-role="button" data-icon="arrow-d" data-mini="true" data-transition="slide">价格</a>
+                    <a href="#time" data-theme="c" data-role="button" data-icon="arrow-d" data-mini="true" data-transition="slide">上架时间</a>
+                </div>
+                <div class="content-primary">
+                    <ul data-role="listview" data-filter="true" data-filter-placeholder="快速筛选" data-inset="true">
+                        <li>
+                            <a href="productdetailinfo.html">
+                                <img src="http://img.muyingzhijia.com/product/normal/66158_01_01.jpg" />
+                                <h3>按价格排序商品名称11</h3>
+                                <p>价格：
+                                    <strong class="ui-font-red">￥212.00</strong></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="productdetailinfo.html">
+                                <img src="http://img.muyingzhijia.com/product/normal/66158_01_01.jpg" />
+                                <h3>按价格排序商品名称22</h3>
+                                <p>价格：
+                                    <strong class="ui-font-red">￥212.00</strong></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="productdetailinfo.html">
+                                <img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" />
+                                <h3>按价格排序商品名称33</h3>
+                                <p>价格：
+                                    <strong class="ui-font-red">￥212.00</strong></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="productdetailinfo.html">
+                                <img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" />
+                                <h3>按价格排序商品名称44</h3>
+                                <p>价格：
+                                    <strong class="ui-font-red">￥212.00</strong></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="productdetailinfo.html">
+                                <img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" />
+                                <h3>按价格排序商品名称55</h3>
+                                <p>价格：
+                                    <strong class="ui-font-red">￥212.00</strong></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="footer" data-theme="c" class="p10">
+                <div class="ui-grid-b" style="padding-bottom:5px;">
+                    <div class="ui-block-a">
+                        <a href="login.html" data-transition="fade">登录</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="registration.html" data-transition="fade">注册</a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a href="http://www.muyingzhijia.com" data-transition="fade">电脑版</a>
+                    </div>
+                </div>
+                <div>
+                    <a href="#productlist" data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a>
+                </div>
+                <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
+            </div>
+        </div>
+
+        <!-- #time -->
+        <div data-role="page" id="#time" data-title="商品列表">
+            <div data-role="header" data-theme="a">
+                <div class="header">
+                    <div class="logo">
+                        <a href="index.html"> <img src="images/logo.png" />
+                        </a>
+                    </div>
+                    <div class="nav">
+                        <a href="category.html" class="menu"></a>
+                        <a href="myaccount.html" class="user"></a>
+                        <a href="shoppingcart.html" class="cart"></a>
+                    </div>
+                </div>
+                <div data-role="navbar" data-iconpos="left">
+                    <ul>
+                        <li>
+                            <a href="category.html#category" data-theme="c" data-icon="grid">商品分类</a>
+                        </li>
+                        <li>
+                            <a href="category.html#subcategory" data-theme="c" data-icon="grid" data-rel="back">妈妈食品</a>
+                        </li>
+                        <li>
+                            <a href="#" data-theme="e" data-icon="grid">孕妇奶粉</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content">
+                <div data-role="controlgroup" data-type="horizontal" class="groupbuttonfullwidth">
+                    <a href="#sales" data-theme="c" data-role="button" data-icon="arrow-d" data-mini="true" data-transition="slide">销量</a>
+                    <a href="#price" data-theme="c" data-role="button" data-icon="arrow-d" data-mini="true" data-transition="slide">价格</a>
+                    <a href="#time" data-theme="e" data-role="button" data-icon="arrow-d" data-mini="true" data-transition="slide">上架时间</a>
+                </div>
+                <div class="content-primary">
+                    <ul data-role="listview" data-filter="true" data-filter-placeholder="快速筛选" data-inset="true">
+                        <li>
+                            <a href="productdetailinfo.html">
+                                <img src="http://img.muyingzhijia.com/product/normal/66158_01_01.jpg" />
+                                <h3>按上架时间排序商品名称11</h3>
+                                <p>价格：
+                                    <strong class="ui-font-red">￥212.00</strong></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="productdetailinfo.html">
+                                <img src="http://img.muyingzhijia.com/product/normal/66158_01_01.jpg" />
+                                <h3>按上架时间排序商品名称22</h3>
+                                <p>价格：
+                                    <strong class="ui-font-red">￥212.00</strong></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="productdetailinfo.html">
+                                <img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" />
+                                <h3>按上架时间排序商品名称33</h3>
+                                <p>价格：
+                                    <strong class="ui-font-red">￥212.00</strong></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="productdetailinfo.html">
+                                <img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" />
+                                <h3>按上架时间排序商品名称44</h3>
+                                <p>价格：
+                                    <strong class="ui-font-red">￥212.00</strong></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="productdetailinfo.html">
+                                <img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" />
+                                <h3>按上架时间排序商品名称55</h3>
+                                <p>价格：
+                                    <strong class="ui-font-red">￥212.00</strong></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="footer" data-theme="c" class="p10">
+                <div class="ui-grid-b" style="padding-bottom:5px;">
+                    <div class="ui-block-a">
+                        <a href="login.html" data-transition="fade">登录</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="registration.html" data-transition="fade">注册</a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a href="http://www.muyingzhijia.com" data-transition="fade">电脑版</a>
+                    </div>
+                </div>
+                <div>
+                    <a href="#productlist" data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a>
+                </div>
+                <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
+            </div>
+        </div>
+
+        <script src="jquerymobile/jquery.min.js"></script>
         <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>     
     </body>
 </html>

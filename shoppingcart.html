@@ -10,69 +10,84 @@
     <body>
         <!-- shoppingcart -->
         <div data-role="page" id="shoppingcart" data-title="购物车">
-            <div data-role="header" data-theme="a" >
-               <div class="header"> 
-               <div class="logo"><a href="index.html"><img src="images/logo.png" /></a></div>
-             <div class="nav"> <a href="category.html" class="menu"></a>
-                <a href="myaccount.html" class="user"></a>
-                 <a href="shoppingcart.html" class="cart"></a>
+            <div data-role="header" data-theme="a">
+                <div class="header">
+                    <div class="logo"><a href="index.html"><img src="images/logo.png"/></a></div>
+                    <div class="nav"><a href="category.html" class="menu"></a>
+                        <a href="myaccount.html" class="user"></a>
+                        <a href="shoppingcart.html" class="cart"></a>
+                    </div>
                 </div>
-                  </div>  
-                  
-                  <div data-role="navbar" data-iconpos="left" >
-                  <ul>
-						<li>
-							<a href="index.html" data-theme="c" data-icon="home">首页</a>
-						</li>
+
+                <div data-role="navbar" data-iconpos="left">
+                    <ul>
                         <li>
-                            <a href="#" data-theme="c" data-icon="check">购物车</a>
-                        </li>                      
+                            <a href="index.html" data-theme="c" data-icon="home">首页</a>
+                        </li>
+                        <li>
+                            <a href="#" data-theme="e" data-icon="check">购物车</a>
+                        </li>
                     </ul>
                 </div>
-            </div>   
-			
-            <div class="p10">
-                您共有<strong>2</strong>件商品
-                </div>   
-				
+            </div>
+
             <div data-role="content">
-        <div class="content-primary">        
-        <ul data-role="listview" data-inset="true">
-    <li><img src="http://img.muyingzhijia.com/product/normal/34690_01_01.jpg" /><h3>商品名称商品名称商品名称11</h3><div data-role="fieldcontain" data-theme="d"> 
-  <label>价格:</label> <strong class="ui-font-red">￥212.00</strong></p></div><div data-role="fieldcontain" data-theme="d"><label>数量： </label><input type="range" name="slider" id="slider" value="1" min="0" max="100"  /></div><div data-role="controlgroup" data-type="horizontal"><a href="#"  data-rel="dialog" data-role="button" data-icon="delete" data-iconpos="left">删除</a></div></li>  
-  <li><img src="http://img.muyingzhijia.com/product/normal/34690_01_01.jpg" /><h3>商品名称商品名称商品名称11</h3><div data-role="fieldcontain" data-theme="d"> 
-  <label>价格:</label> <strong class="ui-font-red">￥212.00</strong></p></div><div data-role="fieldcontain" data-theme="d"><label>数量： </label><input type="range" name="slider" id="slider" value="1" min="0" max="100"  /></div><div data-role="controlgroup" data-type="horizontal"><a href="#"  data-rel="dialog" data-role="button" data-icon="delete" data-iconpos="left">删除</a></div></li>  
-    </ul> 
-<div class="ui-font-bold">实际总金额: <strong class="ui-font-red">25145元</strong></div>
-<a href="productlist.html"  data-transition="slide" data-role="button" data-icon="arrow-l" data-iconpos="left" data-theme="c" data-inline="true" data-mini="true">继续购物</a>   
-<a href="orderconfirm.html" data-transition="slide" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="a" data-inline="true" >去结算</a>  
-</div>  
-                 
-    </div>  
-             
-      <div data-role="footer" data-theme="c" class="p10">
-                 <div class="ui-grid-b" style="padding-bottom:5px;">
-                        <div class="ui-block-a">                           
-                                <a href="login.html" data-transition="fade">
-                                    登录
-                                </a>                           
-                        </div>
-                        <div class="ui-block-b">                            
-                                <a href="registration.html" data-transition="fade">
-                                    注册
-                                </a>                           
-                        </div>
-                          <div class="ui-block-c">                          
-                                <a href="" data-transition="fade">
-                                    电脑版
-                                </a>                            
-                        </div>
-                    </div>                    
-            <div><a href="#productlist"  data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a></div>
-            <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
-            </div>           
+                <div class="content-primary">
+                    <div>您共有<strong>2</strong>件商品</div>
+                    <ul data-role="listview" data-inset="true">
+                        <li><img src="http://img.muyingzhijia.com/product/normal/34690_01_01.jpg"/>
+                            <h3>商品名称商品名称商品名称11</h3>
+                            <div data-role="fieldcontain" data-theme="d">
+                                <label>价格:</label> <strong class="ui-font-red">￥212.00</strong></div>
+                            <div data-role="fieldcontain" data-theme="d"><label>数量： </label>
+                                <input type="range" name="slider"   id="slider" value="1"  min="0" max="100" />
+                            </div>
+                            <div data-role="controlgroup" data-type="horizontal">
+                                <a href="#" data-rel="dialog" data-role="button"  data-icon="delete"  data-iconpos="left">删除</a></div>
+                        </li>
+                        <li><img src="http://img.muyingzhijia.com/product/normal/34690_01_01.jpg"/>
+                            <h3>商品名称商品名称商品名称11</h3>
+                            <div data-role="fieldcontain" data-theme="d">
+                                <label>价格：</label> <strong class="ui-font-red">￥212.00</strong></div>
+                            <div data-role="fieldcontain" data-theme="d"><label>数量：</label>
+                                <input type="range" name="slider" id="slider" value="1" min="0" max="100" />
+                            </div>
+                            <div data-role="controlgroup" data-type="horizontal">
+                                <a href="#" data-rel="dialog" data-role="button"  data-icon="delete" data-iconpos="left">删除</a></div>
+                        </li>
+                    </ul>
+                    <div class="ui-font-bold">实际总金额：<strong class="ui-font-red">25145元</strong></div>
+                    <a href="productlist.html" data-transition="slide" data-role="button" data-icon="arrow-l"
+                       data-iconpos="left" data-theme="c" data-inline="true" data-mini="true">继续购物</a>
+                    <a href="orderconfirm.html" data-transition="slide" data-role="button" data-icon="arrow-r"
+                       data-iconpos="right" data-theme="a" data-inline="true">去结算</a>
+                </div>
+
+            </div>
+
+            <div data-role="footer" data-theme="c" class="p10">
+                <div class="ui-grid-b" style="padding-bottom:5px;">
+                    <div class="ui-block-a">
+                        <a href="login.html" data-transition="fade">
+                            登录
+                        </a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="registration.html" data-transition="fade">
+                            注册
+                        </a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a href="" data-transition="fade">
+                            电脑版
+                        </a>
+                    </div>
+                </div>
+                <div><a href="#productlist" data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a></div>
+                <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
+            </div>
         </div>
-		<script src="jquerymobile/jquery.min.js"></script>
-        <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>   
+        <script src="jquerymobile/jquery.min.js"></script>
+        <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>
     </body>
 </html>
