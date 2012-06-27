@@ -1,110 +1,176 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />    
-		<title>登录</title>		
-        <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.1.0.min.css" />
-        <link rel="stylesheet" href="style/my.css" />
-
-
-    </head>
-    <body>
-
-    <script type="text/x-handlebars">
-        <div id="frm">
-            <b>Load Tweets for: </b>
-            {{view App1.SearchTextField placeholder="Twitter username" valueBinding="App1.tweetsController.username"}}
-            <button {{action "loadTweets" target="App1.tweetsController"}}>Go!</button>
-        </div>
-        <div id="content">
-            <div id="recent">
-                <h3>Recent Users</h3>
-                <ol>
-                    {{#each App.recentUsersController.reverse}}
-                    <li>
-                        <a href="#" title="view again" {{action "searchAgain" target="App.recentUsersController"}}>{{this}}</a> -
-                        <a href="#" title="remove" {{action "removeUser" target="App.recentUsersController"}}>X</a>
-                    </li>
-                    {{/each}}
-                </ol>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.1.0.min.css" />
+    <link rel="stylesheet" href="style/my.css" />
+</head>
+<body>
+<!-- login -->
+<div data-role="page" id="login" data-title="登录">
+    <div data-role="header" data-theme="a">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html"> <img src="images/logo.png" />
+                </a>
             </div>
-            <div id="tweets">
-                <h3>Tweets</h3>
+            <div class="nav">
+                <a href="category.html" class="menu"></a>
+                <a href="myaccount.html" class="user"></a>
+                <a href="shoppingcart.html" class="cart"></a>
             </div>
         </div>
-
-    </script>
-
-
-        <h4>++++++++++++++++++++++++++++++++++++++++++++++++++++</h4>
+        <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="index.html" data-theme="c" data-icon="home">首页</a>
+                </li>
+                <li>
+                    <a href="login.html" data-theme="e" data-icon="grid">登录</a>
+                </li>
+            </ul>
+        </div>
     </div>
 
-    <div id="container">
+    <div data-role="content">
+        <form id="frmLogin" action="" class="validate">
 
-        <script type="text/x-handlebars">
-            {{#each App.PeopleView.people}}
-            <h3>{{name}}</h3>
-            {{/each}}
-        </script>
-    </div>
+            <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup" id="test">
+                    <label for="email">邮箱地址</label>
+                    <input type="text" id="email" name="email" class="required email" placeholder="请填写邮箱Email地址" value="" />
 
-    <h4>Example 1 ---------------------------------------------</h4>
-    <script type="text/x-handlebars">
-        The President of the United States is {{App.president.fullName}}.
-    </script>
-    <p>
-        <button id="btn1">TEST</button>
-    </p>
-
-
-    <h4>Example 2: ---------------------------------------------</h4>
-
-
-    <div id="temp11" style="border: 3px solid #c22;width:300px;">
-        <!-- Insert into here -->
-        <script type="text/x-handlebars">
-            User: Albert Hofmann {{App.president.fullName}}
-            <div>
-                <b>Posts:</b> {{posts}}
-                <br>
-                <b>Hobbies:</b> {{info1.posts}}
+                </fieldset>
             </div>
-        </script>
+            <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" name="password" class="required" placeholder="请输入6-20位英文字母、字符或数字" value="" />
+                </fieldset>
+            </div>
+            <input data-theme="b" value="登录" type="submit" />
+
+            <div class="ui-grid-a p10">
+                <div class="ui-block-a">
+                    <a href="#forgetpassword" data-transition="fade">忘记密码</a>
+                </div>
+                <div class="ui-block-b">
+                    <a href="registration.html" data-transition="fade">立即注册</a>
+                </div>
+            </div>
+            <ul data-role="listview" data-divider-theme="c" data-inset="true">
+                <li data-role="list-divider" role="heading">使用其他合作网站登录</li>
+                <li>
+                    <a href="#page1" data-transition="slide">
+                        <img src="images/16-sinaweibo.png" class="ui-li-icon" />新浪微博登录</a>
+                </li>
+                <li>
+                    <a href="#page1" data-transition="slide" style="padding-left:60px;">
+                        <img src="images/alipay.png" class="ui-li-icon" />支付宝登录</a>
+                </li>
+                <li>
+                    <a href="#page1" data-transition="slide">
+                        <img src="images/qq.png" class="ui-li-icon" />QQ登录</a>
+                </li>
+            </ul>
+        </form>
+
     </div>
-
-    <p>
-        <button id="btn22">TEST</button>
-    </p>
-
-    <h4>Example 3: ---------------------------------------------</h4>
-
-    <p>Binding Test:
-        <button id="btn2">TEST</button>
-    </p>
-
-    <h4>Example 4: ---------------------------------------------</h4>
-    <script type="text/x-handlebars">
-        {{#view App.ClickableView}}
-        This is a clickable area!
-        {{/view}}
-    </script>
-
-    <h4>Example 5: ---------------------------------------------</h4>
-    <script type="text/x-handlebars">
-        {{#view App.ListingView}}
-        <a href="#" {{action "edit" on="click"}}>Edit</a>
-        {{/view}}
-    </script>
-
-
-    <div id="logo">
-
+    <div data-role="footer" data-theme="c" class="p10">
+        <div class="ui-grid-b" style="padding-bottom:5px;">
+            <div class="ui-block-a">
+                <a href="login.html" data-transition="fade">登录</a>
+            </div>
+            <div class="ui-block-b">
+                <a href="registration.html" data-transition="fade">注册</a>
+            </div>
+            <div class="ui-block-c">
+                <a href="http://www.muyingzhijia.com" data-transition="fade">电脑版</a>
+            </div>
+        </div>
+        <div>
+            <a href="#" data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a>
+        </div>
+        <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
     </div>
+</div>
 
-        
-        <script src="jquerymobile/jquery.min.js"></script>
-		<script src="js/ember-0.9.8.1.min.js"></script>   
-		<script src="js/myapp.js"></script>  
-    </body>
+
+<!-- forgetpassword -->
+<div data-role="page" id="forgetpassword" data-title="找回密码">
+    <div data-role="header" data-theme="a">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html"> <img src="images/logo.png" />
+                </a>
+            </div>
+            <div class="nav">
+                <a href="category.html" class="menu"></a>
+                <a href="myaccount.html" class="user"></a>
+                <a href="shoppingcart.html" class="cart"></a>
+            </div>
+        </div>
+        <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="index.html" data-theme="c" data-icon="home">首页</a>
+                </li>
+                <li>
+                    <a href="login.html" data-theme="c" data-icon="grid">登录</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="content">
+        <form id="frmLogin" action="getpassword-success.html">
+            <div data-role="fieldcontain" class="ui-hide-label">
+                <fieldset data-role="controlgroup">
+                    <label for="email">邮箱地址</label>
+                    <input type="text" id="email" name="email" class="required email" placeholder="请填写您注册时的邮箱地址" value="" />
+                </fieldset>
+            </div>
+            <div data-role="fieldcontain" class="ui-hide-label">
+                <fieldset data-role="controlgroup">
+                    <label for="authcode">验证码</label>
+                    <input type="text" id="authcode" name="authcode" placeholder="请输入验证码" value="" size="4" style="width:100px;" />
+                    <a href="#" data-icon="refresh" data-iconpos="left">看不清，换一张</a>
+                </fieldset>
+            </div>
+            <input data-theme="b" value="找回密码" type="submit" />
+            <div class="ui-grid-a p10">
+                <p>如果您长时间收不到邮件可以尝试：</p>
+                <p>请致电客服电话 400-820-1000</p>
+                <p>或用您的邮箱给客户服务邮箱发送邮件kf@muyingzhijia.com</p>
+            </div>
+        </form>
+    </div>
+    <div data-role="footer" data-theme="c" class="p10">
+        <div class="ui-grid-b" style="padding-bottom:5px;">
+            <div class="ui-block-a">
+                <a href="login.html" data-transition="fade">登录</a>
+            </div>
+            <div class="ui-block-b">
+                <a href="registration.html" data-transition="fade">注册</a>
+            </div>
+            <div class="ui-block-c">
+                <a href="http://www.muyingzhijia.com" data-transition="fade">电脑版</a>
+            </div>
+        </div>
+        <div>
+            <a href="#" data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a>
+        </div>
+        <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
+    </div>
+</div>
+
+
+<script src="jquerymobile/jquery.min.js"></script>
+<script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/ember-0.9.8.1.min.js"></script>
+<script src="js/myapp.js"></script>
+
+</body>
 </html>
