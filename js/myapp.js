@@ -7,49 +7,88 @@
 // ==========================================================================
 
 
+/**************************
+ * Application
+ **************************/
+
+App1 = Em.Application.create();
 
 
-Songs = Ember.Application.create({
-    mixmaster: 'Andy',
-    totalReviews: 0,
-    ready: function(){
-        //alert('Ember sings helloooooooooo!');
-    }
+
+
+
+/**************************
+ * Models
+ **************************/
+App1.Tweet = Em.Object.extend({
+    avatar: null,
+    screen_name: null,
+    text: null,
+    date: null
 });
 
-Songs.Song = Ember.Object.extend({
-    title: null,
-    artist: null,
-    genre: null,
-    listens: 0
+/**************************
+ * Views
+ **************************/
+
+
+App1.SearchTextField = Em.TextField.extend({
+        insertNewline: function(){
+            App1.tweetsController.loadTweets();
+        }
 });
 
-var mySong = Songs.Song.create({
-    title: 'Son of the Morning',
-    artist: 'Oh, Sleeper',
-    genre: 'Screamo'
-});
-console.log(mySong.genre);
+/**************************
+ * Controllers
+ **************************/
 
-
-Songs.ReviewTextArea = Ember.TextArea.extend({
-    placeholder: 'Enter your review'
-});
-
-
-Songs.songsController = Ember.ArrayController.create({
+App1.tweetsController = Em.ArrayController.create({
     content: [],
-    init: function(){
-        this._super();
-        var song = Songs.Song.create({
-            title: 'Son of the Morning',
-            artist: 'Oh, Sleeper',
-            genre: 'Screamo'
-        });
-        this.pushObject(song);
+    username: '',
+    loadTweets: function() {
+        var me = this;
+        var username = me.get("username");
+
+        if ( username ) {
+            var url = 'http://api.twitter.com/1/statuses/user_timeline.json'
+                url += '?screen_name=%@&callback=?'.fmt(me.get("username"));
+            // push username to recent user array
+            App1.recentUsersController.addUser(username);
+            $.getJSON(url,function(data){
+                me.set('content', []);
+                $(data).each(function(index,value){
+                    var t = App1.Tweet.create({
+                        avatar: value.user.profile_image_url,
+                        screen_name: value.user.screen_name,
+                        text: value.text,
+                        date: value.created_at
+                    });
+                    me.pushObject(t);
+                })
+            });
+        }
     }
 });
-console.log(Songs.songsController.content);
+
+App1.recentUsersController = Em.ArrayController.create({
+    content: [],
+    addUser: function(name) {
+        if ( this.contains(name) ) this.removeObject(name);
+        this.pushObject(name);
+    },
+    removeUser: function(view){
+        this.removeObject(view.context);
+    },
+    searchAgain: function(view){
+        App1.tweetsController.set('username', view.context);
+        App1.tweetsController.loadTweets();
+    },
+    reverse: function(){
+        return this.toArray().reverse();
+    }.property('@each')
+});
+
+//console.log(App1.tweetsController.content);
 
 
 

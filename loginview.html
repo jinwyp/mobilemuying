@@ -11,25 +11,33 @@
     </head>
     <body>
 
+    <script type="text/x-handlebars">
+        <div id="frm">
+            <b>Load Tweets for: </b>
+            {{view App1.SearchTextField placeholder="Twitter username" valueBinding="App1.tweetsController.username"}}
+            <button {{action "loadTweets" target="App1.tweetsController"}}>Go!</button>
+        </div>
+        <div id="content">
+            <div id="recent">
+                <h3>Recent Users</h3>
+                <ol>
+                    {{#each App.recentUsersController.reverse}}
+                    <li>
+                        <a href="#" title="view again" {{action "searchAgain" target="App.recentUsersController"}}>{{this}}</a> -
+                        <a href="#" title="remove" {{action "removeUser" target="App.recentUsersController"}}>X</a>
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+            <div id="tweets">
+                <h3>Tweets</h3>
+            </div>
+        </div>
 
-    <div>
-        <script type="text/x-handlebars">
-            My songs have {{Songs.totalReviews}} reviews.
-        </script>
-
-        <script type="text/x-handlebars">
-            {{#each Songs.songsController}}
-            <h3>{{title}}</h3>
-
-            <p>{{artist}} - {{genre}}</p>
-            {{/each}}
-        </script>
+    </script>
 
 
-        <script type="text/x-handlebars">
-            Hello, <b>{{view App.ReviewTextArea}}</b>
-        </script>
-        <h4>---------------------------------------------</h4>
+        <h4>++++++++++++++++++++++++++++++++++++++++++++++++++++</h4>
     </div>
 
     <div id="container">
@@ -91,9 +99,7 @@
 
 
     <div id="logo">
-        <script type="text/x-handlebars">
-        <img {{bindAttr ="App.LogoView.logoUrl"}} alt="Logo">
-        </script>
+
     </div>
 
         
