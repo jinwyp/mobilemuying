@@ -10,58 +10,69 @@
     <body>
         <!-- onlinepayment -->
         <div data-role="page" id="onlinepayment" data-title="在线支付">
-            <div data-role="header" data-theme="a" >
-               <div class="header"> 
-               <div class="logo"><a href="index.html"><img src="images/logo.png" /></a></div>
-             <div class="nav"> <a href="category.html" class="menu"></a>
-                <a href="myaccount.html" class="user"></a>
-                 <a href="shoppingcart.html" class="cart"></a>
+            <div data-role="header" data-theme="a">
+                <div class="header">
+                    <div class="logo"><a href="index.html"><img src="images/logo.png"/></a></div>
+                    <div class="nav"><a href="category.html" class="menu"></a>
+                        <a href="myaccount.html" class="user"></a>
+                        <a href="shoppingcart.html" class="cart"></a>
+                    </div>
                 </div>
-                  </div>  
-              
-            </div>    
-                    
+
+            </div>
+
             <div data-role="content">
-              <ul data-role="listview" data-divider-theme="d" data-inset="true">
+                <ul data-role="listview" data-divider-theme="d" data-inset="true">
                     <li data-role="list-divider" role="heading">
-                       在线支付（暂时仅支持信用卡支付，请选择以下信用卡银行）
+                        在线支付（暂时仅支持信用卡支付，请选择以下信用卡银行）
                     </li>
                     <li>
-     <a href="http://www.icbc.com.cn/icbc/"><img src="images/bank01.jpg" alt="" /><h3>中国工商银行</h3></a>
-                    </li> 
-                       <li>
-     <a href="http://www.icbc.com.cn/icbc/"><img src="images/bank01.jpg" alt="" /><h3>中国工商银行</h3></a>
-                    </li>     
-                       <li>
-     <a href="http://www.icbc.com.cn/icbc/"><img src="images/bank01.jpg" alt="" /><h3>中国工商银行</h3></a>
-                    </li>         
-               </ul>
-    		</div>  
-             
-      <div data-role="footer" data-theme="c" class="p10">
-                 <div class="ui-grid-b" style="padding-bottom:5px;">
-                        <div class="ui-block-a">                           
-                                <a href="login.html" data-transition="fade">
-                                    登录
-                                </a>                           
-                        </div>
-                        <div class="ui-block-b">                            
-                                <a href="registration.html" data-transition="fade">
-                                    注册
-                                </a>                           
-                        </div>
-                          <div class="ui-block-c">                          
-                                <a href="http://www.muyingzhijia.com" data-transition="fade">
-                                    电脑版
-                                </a>                            
-                        </div>
-                    </div>                    
-            <div><a href="#productlist"  data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a></div>
-            <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
+                        <a href="http://www.icbc.com.cn/icbc/"><img src="images/bank01.jpg" alt=""/>
+
+                            <h3>中国工商银行</h3></a>
+                    </li>
+                    <li>
+                        <a href="http://www.icbc.com.cn/icbc/"><img src="images/bank01.jpg" alt=""/>
+
+                            <h3>中国工商银行</h3></a>
+                    </li>
+                    <li>
+                        <a href="http://www.icbc.com.cn/icbc/"><img src="images/bank01.jpg" alt=""/>
+
+                            <h3>中国工商银行</h3></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div data-role="footer" data-theme="c" class="p10">
+                <div class="ui-grid-b" style="padding-bottom:5px;">
+                    <div class="ui-block-a">
+                        <a href="login.html" data-transition="fade">
+                            登录
+                        </a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="registration.html" data-transition="fade">
+                            注册
+                        </a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a href="http://www.muyingzhijia.com" data-transition="fade">
+                            电脑版
+                        </a>
+                    </div>
+                </div>
+                <div><a href="#productlist" data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a></div>
+                <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
             </div>
            
         </div>
         <script src="jquerymobile/jquery.min.js"></script>
-        <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>       
+        <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>
+        <script>
+            $('.gotop').tap(function(){
+                $.mobile.silentScroll(10);
+            });
+        </script>
     </body>
 </html>

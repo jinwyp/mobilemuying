@@ -80,12 +80,17 @@
 					</div>
 				</div>
 				<div>
-					<a href="#" data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a>
+					<span data-role="button" data-icon="arrow-u" data-iconpos="left" class="gotop">回顶部</span>
 				</div>
 				<div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
 			</div>
 		</div>
 		<script src="jquerymobile/jquery.min.js"></script>
-        <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>  
+        <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>
+        <script>
+            $('.gotop').tap(function(){
+                $.mobile.silentScroll(10);
+            });
+        </script>
     </body>
 </html>
