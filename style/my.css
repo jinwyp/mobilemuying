@@ -747,7 +747,7 @@ p{line-height: 1.6em;}
 .nav a.menu{width:50px;background-position:0 0;}
 .nav a.user{width:50px;background-position:-57px 0;}
 .nav a.cart{width:40px;background-position:-128px 0;position: relative;}
-.nav .cart-count{position:absolute;font-size:10px;font-weight:bold;padding:.2em .5em;top:0;right:0;background:#e60000;border:2px solid #fff;color:#fff; text-shadow: 0 1px 0 #000; }
+.nav .cart-count{position:absolute;font-size:10px;font-weight:bold;padding:.2em .5em;top:0;right:0;background:#c3412f;border:1px solid #fff;color:#fff; text-shadow: 0 1px 0 #000; }
 /*product*/
 .iteminfo fieldset{line-height:2em;}
 .ui-font-red{color:#e60000;}
