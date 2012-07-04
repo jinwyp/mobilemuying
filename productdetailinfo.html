@@ -5,7 +5,94 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title></title>
         <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.1.0.min.css" />
-        <link rel="stylesheet" href="style/my.css" />             
+        <link rel="stylesheet" href="style/my.css" />
+        <style type="text/css" media="all">
+            #wrapper {
+                width:300px;
+                height:300px;
+                position:relative;	/* On older OS versions "position" and "z-index" must be defined, */
+                z-index:1;			/* it seems that recent webkit is less picky and works anyway. */
+                overflow:hidden;
+                background:#aaa;
+                -webkit-border-radius:10px;
+                -moz-border-radius:10px;
+                -o-border-radius:10px;
+                border-radius:10px;
+                background:#e3e3e3;
+            }
+
+            #scroller {
+                width:2100px;
+                height:100%;
+                padding:0;
+            }
+
+            #scroller ul {
+                list-style:none;
+                display:block;
+                width:100%;
+                height:100%;
+                padding:0;
+                margin:0;
+                text-align:left;
+            }
+
+            #scroller li {
+                -webkit-box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -o-box-sizing:border-box;
+                box-sizing:border-box;
+                display:block; float:left;
+                width:300px; height:160px;
+                text-align:center;
+                font-family:georgia;
+                font-size:18px;
+                line-height:140%;
+            }
+
+            #nav {
+                width:300px;
+                margin-top:10px;
+                clear:left;
+            }
+
+
+            #indicator, #indicator > li {
+                display:block;
+                float:left;
+                list-style:none;
+                padding:0;
+                margin:0;
+            }
+            #next{float:right;}
+            #prev{float:left;}
+
+            #indicator {
+                width:110px;
+                padding:12px 0 0 30px;
+            }
+
+            #indicator > li {
+                text-indent:-9999em;
+                width:8px; height:8px;
+                -webkit-border-radius:4px;
+                -moz-border-radius:4px;
+                -o-border-radius:4px;
+                border-radius:4px;
+                background:#ddd;
+                overflow:hidden;
+                margin-right:4px;
+            }
+
+            #indicator > li.active {
+                background:#888;
+            }
+
+            #indicator > li:last-child {
+                margin:0;
+            }
+
+        </style>
     </head>
     <body>
         <!-- intro -->
@@ -45,12 +132,25 @@
 				</div>				
 				<div class="content-primary">
 					<h2>商品名称 好奇金装贴身舒适纸尿裤超值特惠装L78片(品牌好奇)</h2>
-					<img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" width="300" height="300" />
-					<div data-role="controlgroup" data-type="horizontal" data-theme="d">
-					    <a href="#prv" data-role="button" data-icon="arrow-l" data-iconpos="left" data-mini="true">上一张</a>
-                        &nbsp;&nbsp;<span>1/3</span>&nbsp;&nbsp;
-                        <a href="#" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true">下一张</a>
+                    <div id="wrapper">
+                        <div id="scroller">
+                            <ul id="thelist">
+                                <li><img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" width="300" height="300" /></li>
+                                <li><img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" width="300" height="300" /></li>
+                                <li><img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" width="300" height="300" /></li>
+                            </ul>
+                        </div>
                     </div>
+					<div data-role="controlgroup" data-type="horizontal" data-theme="c" id="nav">
+					    <a onclick="myScroll.scrollToPage('prev', 0);return false" data-role="button" data-icon="arrow-l" data-iconpos="left" data-mini="true" id="prev" >上一张</a>
+                        <ul id="indicator">
+                            <li class="active">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ul>
+                        <a onclick="myScroll.scrollToPage('next', 0);return false" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true" id="next" >下一张</a>
+                    </div>
+
 					<div class="iteminfo">
 					<fieldset>
 						<label>市场价：</label>
@@ -164,6 +264,26 @@
 		</div>
 
 		<script src="jquerymobile/jquery.min.js"></script>
-        <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>  
+        <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>
+        <script src="js/scroll.js"></script>
+        <script type="text/javascript">
+            $('.gotop').tap(function(){
+                $.mobile.silentScroll(10);
+            });
+            var myScroll;
+            function loaded() {
+                myScroll = new iScroll('wrapper', {
+                    snap: true,
+                    momentum: false,
+                    hScrollbar: false,
+                    onScrollEnd: function () {
+                        document.querySelector('#indicator > li.active').className = '';
+                        document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+                    }
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', loaded, false);
+        </script>
     </body>
 </html>
