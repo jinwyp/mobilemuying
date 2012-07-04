@@ -7,22 +7,17 @@
         <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.1.0.min.css" />
         <link rel="stylesheet" href="style/my.css" />
         <style type="text/css" media="all">
-            #wrapper {
+            #wrapper-goods-img {
                 width:300px;
                 height:300px;
-                position:relative;	/* On older OS versions "position" and "z-index" must be defined, */
-                z-index:1;			/* it seems that recent webkit is less picky and works anyway. */
+                position:relative;
+                z-index:1;
                 overflow:hidden;
                 background:#aaa;
-                -webkit-border-radius:10px;
-                -moz-border-radius:10px;
-                -o-border-radius:10px;
-                border-radius:10px;
-                background:#e3e3e3;
             }
 
             #scroller {
-                width:2100px;
+                width:900px;
                 height:100%;
                 padding:0;
             }
@@ -38,59 +33,41 @@
             }
 
             #scroller li {
-                -webkit-box-sizing:border-box;
-                -moz-box-sizing:border-box;
-                -o-box-sizing:border-box;
-                box-sizing:border-box;
-                display:block; float:left;
-                width:300px; height:160px;
+                display:block;
+                float:left;
+                width:300px;
+                height:160px;
                 text-align:center;
-                font-family:georgia;
-                font-size:18px;
-                line-height:140%;
-            }
 
-            #nav {
+            }
+            #control-scroll {
                 width:300px;
                 margin-top:10px;
                 clear:left;
             }
-
-
             #indicator, #indicator > li {
                 display:block;
                 float:left;
-                list-style:none;
                 padding:0;
+                margin:0;
+            }
+            #indicator {
+                text-align: center;
+                height:30px;line-height: 30px;
+                padding-left:30px;
+            }
+            #indicator > li {
+                overflow:hidden;
+                padding:0 5px;
+            }
+            #indicator > li.active {
+                color: #e60000;
+            }
+            #indicator > li:last-child {
                 margin:0;
             }
             #next{float:right;}
             #prev{float:left;}
-
-            #indicator {
-                width:110px;
-                padding:12px 0 0 30px;
-            }
-
-            #indicator > li {
-                text-indent:-9999em;
-                width:8px; height:8px;
-                -webkit-border-radius:4px;
-                -moz-border-radius:4px;
-                -o-border-radius:4px;
-                border-radius:4px;
-                background:#ddd;
-                overflow:hidden;
-                margin-right:4px;
-            }
-
-            #indicator > li.active {
-                background:#888;
-            }
-
-            #indicator > li:last-child {
-                margin:0;
-            }
 
         </style>
     </head>
@@ -132,16 +109,16 @@
 				</div>				
 				<div class="content-primary">
 					<h2>商品名称 好奇金装贴身舒适纸尿裤超值特惠装L78片(品牌好奇)</h2>
-                    <div id="wrapper">
+                    <div id="wrapper-goods-img">
                         <div id="scroller">
-                            <ul id="thelist">
+                            <ul>
                                 <li><img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" width="300" height="300" /></li>
                                 <li><img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" width="300" height="300" /></li>
                                 <li><img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" width="300" height="300" /></li>
                             </ul>
                         </div>
                     </div>
-					<div data-role="controlgroup" data-type="horizontal" data-theme="c" id="nav">
+					<div data-role="controlgroup" data-type="horizontal" data-theme="c" id="control-scroll">
 					    <a onclick="myScroll.scrollToPage('prev', 0);return false" data-role="button" data-icon="arrow-l" data-iconpos="left" data-mini="true" id="prev" >上一张</a>
                         <ul id="indicator">
                             <li class="active">1</li>
@@ -150,7 +127,7 @@
                         </ul>
                         <a onclick="myScroll.scrollToPage('next', 0);return false" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true" id="next" >下一张</a>
                     </div>
-
+                    <div data-role=""></div>
 					<div class="iteminfo">
 					<fieldset>
 						<label>市场价：</label>
@@ -168,6 +145,7 @@
 					<label>幸运星：</label>212</fieldset>　</div>
 					<a href="shoppingcart.html"  data-role="button" data-icon="add" data-iconpos="left" data-theme="a">加入购物车</a>
 				</div>
+                </div>
 			</div>
 			<div data-role="footer" data-theme="c" class="p10">
 				<div class="ui-grid-b" style="padding-bottom:5px;">
@@ -272,7 +250,7 @@
             });
             var myScroll;
             function loaded() {
-                myScroll = new iScroll('wrapper', {
+                myScroll = new iScroll('wrapper-goods-img', {
                     snap: true,
                     momentum: false,
                     hScrollbar: false,
@@ -282,7 +260,6 @@
                     }
                 });
             }
-
             document.addEventListener('DOMContentLoaded', loaded, false);
         </script>
     </body>
