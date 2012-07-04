@@ -42,7 +42,7 @@
         <div data-role="content">
             <ul data-role="listview" data-divider-theme="d" data-inset="true">
                 <li data-role="list-divider" role="heading">收货人信息</li>
-                <li data-theme="c">
+                <li>
                     <a href="addresslist.html">
                         <p>收货人：王宇鹏</p>
                         <p>收货地址：上海市普陀区， 澳门路519弄华生大厦1号楼7楼</p>
@@ -51,16 +51,16 @@
                     </a>
                 </li>
                 <li data-role="list-divider" role="heading">支付方式</li>
-                <li data-theme="c">
+                <li>
                     <a href="#paymentlist">
                         <p>货到付款</p>
                     </a>
                 </li>
                 <li data-role="list-divider" role="heading">配送方式</li>
-                <li data-theme="c">
+                <li>
                     <a href="#deliverylist">
                         <p>母婴之家快递 上海市区用户，单笔订单满50元免费运费。当日21点前的订单可在次日及次日以后的日期送到，21点以后的订单需第三天及以后的日期送到。</p>
-                        <p>送货日期：2012-06-01</p>
+                        <p>送货日期：只工作日送货(双休日、假日不用送)</p>
                         <p>付款方式：现金</p>
                     </a>
                 </li>
@@ -72,7 +72,7 @@
                     </a>
                 </li>
                 <li data-role="list-divider" role="heading">订单备注</li>
-                <li data-theme="c">
+                <li>
                     <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
                 </li>
             </ul>
@@ -147,13 +147,15 @@
  
                     
 		<div data-role="content">
+            <div data-role="fieldcontain" >
 			<fieldset data-role="controlgroup">
-				<legend></legend>
-				<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+				<legend>请选择付款方式</legend>
+				<input type="radio" name="radio-pay-1" id="radio-choice-1" value="choice-1" checked="checked" />
 				<label for="radio-choice-1">在线支付（支持绝大数银行借记卡及部分银行信息卡）</label>
-				<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2" />
+				<input type="radio" name="radio-pay-1" id="radio-choice-2" value="choice-2" />
 				<label for="radio-choice-2">货到付款（送货上门后再付款，支持现金或POS机刷卡)</label>
 			</fieldset>
+             </div>
 			<a href="orderconfirm.html"   data-role="button" data-theme="a">确认保存</a>
 		</div>
 
@@ -210,99 +212,44 @@
   
                     
 		<div data-role="content">
-			<ul data-role="listview" data-divider-theme="d" data-inset="true">
-				<li data-role="list-divider" role="heading">选择配送方式</li>
-				<li data-theme="c">
+            <div data-role="fieldcontain" >
+					<fieldset data-role="controlgroup">
+						<legend>选择配送方式</legend>
+						<input type="radio" name="radio-type-1" id="radio-type-1" value="type-1" checked="checked" />
+						<label for="radio-type-1">母婴之家快递（覆盖范围上海市区用户）</label>
+						<input type="radio" name="radio-type-1" id="radio-type-2" value="type-2" />
+						<label for="radio-type-2">中通快递送货（覆盖范围江苏、浙江省用户）</label>
+						<input type="radio" name="radio-type-1" id="radio-type-3" value="type-3" />
+						<label for="radio-type-3">EMS邮政特快（覆盖范围全国绝大部分乡镇村）</label>
+					</fieldset>
+				</div>
+
+            <div data-role="fieldcontain" >
+					<fieldset data-role="controlgroup" data-type="">
+						<legend>选择送货时间</legend>
+                        <input type="radio" name="radio-date-1" id="radio-date-1" value="date-1" checked="checked" />
+                        <label for="radio-date-1">只工作日送货（双休日、假日不用送）</label>
+                        <input type="radio" name="radio-date-1" id="radio-date-2" value="date-2" />
+                        <label for="radio-date-2">工作日、双休日与假日均可送货</label>
+                        <input type="radio" name="radio-date-1" id="radio-date-3" value="date-3" />
+                        <label for="radio-date-3">只双休日、假日送货（工作日不用送）</label>
+					</fieldset>
+				</div>
+
+            <div data-role="fieldcontain" >
+                <legend>付款方式</legend>
 					<fieldset data-role="controlgroup">
 						<legend></legend>
-						<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
-						<label for="radio-choice-1">母婴之家快递（覆盖范围上海市区用户）</label>
-						<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2" />
-						<label for="radio-choice-2">中通快递送货（覆盖范围江苏、浙江省用户）</label>
-						<input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3" />
-						<label for="radio-choice-3">EMS邮政特快（覆盖范围全国绝大部分乡镇村）</label>
-					</fieldset>
-				</li>
-				<li data-role="list-divider" role="heading">填写送货时间</li>
-				<li data-theme="c">
-					<fieldset data-role="controlgroup" data-type="horizontal">
-						<legend></legend>
-						<label for="select-choice-year">年</label>
-						<select name="select-choice-year" id="select-choice-year">
-							<option value="2013">2013</option>
-							<option value="2012">2012</option>
-							<option value="2011">2011</option>
-							<option value="2010">2010</option>
-							<option value="2009">2009</option>
-							<option value="2008">2008</option>
-							<option value="2007">2007</option>
-						</select>
-						<label for="select-choice-month">月</label>
-						<select name="select-choice-month" id="select-choice-month">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-							<option value="10">10</option>
-							<option value="10">10</option>
-							<option value="12">12</option>
-						</select>
-						<label for="select-choice-day">日</label>
-						<select name="select-choice-day" id="select-choice-day">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-							<option value="10">10</option>
-							<option value="10">10</option>
-							<option value="12">12</option>
-							<option value="13">13</option>
-							<option value="14">14</option>
-							<option value="15">15</option>
-							<option value="16">16</option>
-							<option value="17">17</option>
-							<option value="18">18</option>
-							<option value="19">19</option>
-							<option value="20">20</option>
-							<option value="21">21</option>
-							<option value="22">22</option>
-							<option value="23">23</option>
-							<option value="24">24</option>
-							<option value="25">25</option>
-							<option value="26">26</option>
-							<option value="27">27</option>
-							<option value="28">28</option>
-							<option value="29">29</option>
-							<option value="30">30</option>
-							<option value="31">31</option>
-						</select>
-					</fieldset>
-				</li>
-				<li data-role="list-divider" role="heading">付款方式</li>
-				<li data-theme="c">
-					<fieldset data-role="controlgroup">
-						<legend></legend>
-						<input type="radio" name="radio-choice-5" id="radio-choice-1" value="choice-1" checked="checked" />
+						<input type="radio" name="radio-pay-1" id="radio-choice-1" value="choice-1" checked="checked" />
 						<label for="radio-choice-1">现金</label>
-						<input type="radio" name="radio-choice-5" id="radio-choice-2" value="choice-2" />
+						<input type="radio" name="radio-pay-1" id="radio-choice-2" value="choice-2" />
 						<label for="radio-choice-2">POS机刷卡（仅支持带有银联标识的银行卡）</label>
 					</fieldset>
-				</li>
-			</ul>
+				</div>
+			</div>
 			<a href="orderconfirm.html"   data-role="button" data-theme="a">确认保存</a>
 		</div>
- 
-             
+
 		<div data-role="footer" data-theme="c" class="p10">
 			<div class="ui-grid-b" style="padding-bottom:5px;">
 				<div class="ui-block-a">
@@ -355,31 +302,27 @@
    
                     
 		<div data-role="content">
-			<ul data-role="listview" data-divider-theme="d" data-inset="true">
-				<li data-role="list-divider" role="heading">是否需要发票</li>
-				<li data-theme="c">
+            <div data-role="fieldcontain" >
 					<fieldset data-role="controlgroup">
-						<legend></legend>
-						<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
-						<label for="radio-choice-1">否</label>
-						<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2" />
-						<label for="radio-choice-2">个人</label>
-						<input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3" />
-						<label for="radio-choice-3">公司</label>
+						<legend>是否需要发票发票</legend>
+						<input type="radio" name="radio-invoice-1" id="radio-need-1" value="need-1" checked="checked" />
+						<label for="radio-need-1">否</label>
+						<input type="radio" name="radio-invoice-1" id="radio-need-2" value="need-2" />
+						<label for="radio-need-2">个人</label>
+						<input type="radio" name="radio-invoice-1" id="radio-need-3" value="need-3" />
+						<label for="radio-need-3">公司</label>
 						<input type="text" id="company" name="company" class="required" placeholder="请填写发票抬头" value="" />
 					</fieldset>
-				</li>
-				<li data-role="list-divider" role="heading">发票类型</li>
-				<li data-theme="c">
+				</div>
+            <div data-role="fieldcontain" >
 					<fieldset data-role="controlgroup">
-						<legend></legend>
-						<input type="radio" name="radio-choice-5" id="radio-choice-1" value="choice-1" checked="checked" />
-						<label for="radio-choice-1">食品发票</label>
-						<input type="radio" name="radio-choice-5" id="radio-choice-2" value="choice-2" />
-						<label for="radio-choice-2">办公用品</label>
+						<legend>发票类型</legend>
+						<input type="radio" name="radio-type-5" id="radio-type-1" value="type-1" checked="checked" />
+						<label for="radio-type-1">食品发票</label>
+						<input type="radio" name="radio-type-5" id="radio-type-2" value="type-2" />
+						<label for="radio-type-2">办公用品</label>
 					</fieldset>
-				</li>
-			</ul>
+			</div>
 			<a href="orderconfirm.html"   data-role="button" data-theme="a">确认保存</a>
 		</div>
 
