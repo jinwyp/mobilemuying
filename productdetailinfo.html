@@ -6,69 +6,26 @@
         <title></title>
         <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.1.0.min.css" />
         <link rel="stylesheet" href="style/my.css" />
-        <style type="text/css" media="all">
+        <style>
             #wrapper-goods-img {
-                width:300px;
-                height:300px;
-                position:relative;
-                z-index:1;
-                overflow:hidden;
-                background:#aaa;
-            }
+                width: 300px;
+                height: 300px;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                background: #aaa;
 
-            #scroller {
-                width:900px;
-                height:100%;
-                padding:0;
             }
 
             #scroller ul {
-                list-style:none;
-                display:block;
-                width:100%;
-                height:100%;
-                padding:0;
-                margin:0;
-                text-align:left;
+                list-style: none;
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+                text-align: left;
             }
-
-            #scroller li {
-                display:block;
-                float:left;
-                width:300px;
-                height:160px;
-                text-align:center;
-
-            }
-            #control-scroll {
-                width:300px;
-                margin-top:10px;
-                clear:left;
-            }
-            #indicator, #indicator > li {
-                display:block;
-                float:left;
-                padding:0;
-                margin:0;
-            }
-            #indicator {
-                text-align: center;
-                height:30px;line-height: 30px;
-                padding-left:30px;
-            }
-            #indicator > li {
-                overflow:hidden;
-                padding:0 5px;
-            }
-            #indicator > li.active {
-                color: #e60000;
-            }
-            #indicator > li:last-child {
-                margin:0;
-            }
-            #next{float:right;}
-            #prev{float:left;}
-
         </style>
     </head>
     <body>
@@ -117,21 +74,14 @@
                                          height="300"/></li>
                                 <li><img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" width="300"
                                          height="300"/></li>
-                                <li><img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" width="300"
-                                         height="300"/></li>
                             </ul>
                         </div>
                     </div>
-                    <div data-role="controlgroup" data-type="horizontal" data-theme="c" id="control-scroll">
-                        <a onclick="myScroll.scrollToPage('prev', 0);return false" data-role="button"
-                           data-icon="arrow-l" data-iconpos="left" data-mini="true" id="prev">上一张</a>
-                        <ul id="indicator">
-                            <li class="active">1</li>
-                            <li>2</li>
-                            <li>3</li>
-                        </ul>
-                        <a onclick="myScroll.scrollToPage('next', 0);return false" data-role="button"
-                           data-icon="arrow-r" data-iconpos="right" data-mini="true" id="next">下一张</a>
+                    <div class="p10"></div>
+                    <div data-role="controlgroup" data-type="horizontal" data-theme="c" class="page">
+                        <a href="#prev" data-role="button" data-icon="arrow-l" data-iconpos="left" data-mini="true" id="prev">上一页</a>
+                        &nbsp;&nbsp;<span>1/3</span>&nbsp;&nbsp;
+                        <a href="#next" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true" id="next">下一页</a>
                     </div>
                     <div data-role=""></div>
                     <div class="iteminfo">
@@ -253,24 +203,10 @@
 
 		<script src="jquerymobile/jquery.min.js"></script>
         <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>
-        <script src="js/scroll.js"></script>
         <script type="text/javascript">
             $('.gotop').tap(function(){
                 $.mobile.silentScroll(10);
             });
-            var myScroll;
-            function loaded() {
-                myScroll = new iScroll('wrapper-goods-img', {
-                    snap: true,
-                    momentum: false,
-                    hScrollbar: false,
-                    onScrollEnd: function () {
-                        document.querySelector('#indicator > li.active').className = '';
-                        document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
-                    }
-                });
-            }
-            document.addEventListener('DOMContentLoaded', loaded, false);
         </script>
     </body>
 </html>
