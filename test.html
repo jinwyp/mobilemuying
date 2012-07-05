@@ -1,164 +1,143 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>iScroll demo: Carousel</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" />
+    <style>
+        #pagecontent {
+        text-align:center;
+    }
 
-    <script type="text/javascript" src="js/scroll.js"></script>
+    .gallerycontent a img {
+        height:80px;
+        width:80px;
+        padding:3px;
+        background-color:#222;
+    }
 
-    <script type="text/javascript">
-        var myScroll;
-
-        function loaded() {
-            myScroll = new iScroll('wrapper', {
-                snap: true,
-                momentum: false,
-                hScrollbar: false,
-                onScrollEnd: function () {
-                    document.querySelector('#indicator > li.active').className = '';
-                    document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
-                }
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', loaded, false);
-    </script>
-
-    <style type="text/css" media="all">
-        body,ul,li {
-            padding:10px;
-            margin:0;
-        }
-
-        body {
-            font-size:12px;
-            -webkit-user-select:none;
-            -webkit-text-size-adjust:none;
-            font-family:helvetica;
-        }
-
-        #wrapper {
-            width:300px;
-            height:160px;
-
-            float:left;
-            position:relative;	/* On older OS versions "position" and "z-index" must be defined, */
-            z-index:1;			/* it seems that recent webkit is less picky and works anyway. */
-            overflow:hidden;
-
-            background:#aaa;
-            -webkit-border-radius:10px;
-            -moz-border-radius:10px;
-            -o-border-radius:10px;
-            border-radius:10px;
-            background:#e3e3e3;
-        }
-
-        #scroller {
-            width:900px;
-            height:100%;
-            float:left;
-            padding:0;
-        }
-
-        #scroller ul {
-            list-style:none;
-            display:block;
-            float:left;
-            width:100%;
-            height:100%;
-            padding:0;
-            margin:0;
-            text-align:left;
-        }
-
-        #scroller li {
-            -webkit-box-sizing:border-box;
-            -moz-box-sizing:border-box;
-            -o-box-sizing:border-box;
-            box-sizing:border-box;
-            display:block; float:left;
-            width:300px; height:160px;
-            text-align:center;
-            font-family:georgia;
-            font-size:18px;
-            line-height:140%;
-        }
-
-        #nav {
-            width:300px;
-            float:left;
-        }
-
-        #prev, #next {
-            float:left;
-            font-weight:bold;
-            font-size:14px;
-            padding:5px 0;
-            width:80px;
-        }
-
-        #next {
-            float:right;
-            text-align:right;
-        }
-
-        #indicator, #indicator > li {
-            display:block; float:left;
-            list-style:none;
-            padding:0; margin:0;
-        }
-
-        #indicator {
-            width:110px;
-            padding:12px 0 0 30px;
-        }
-
-        #indicator > li {
-            text-indent:-9999em;
-            width:8px; height:8px;
-            -webkit-border-radius:4px;
-            -moz-border-radius:4px;
-            -o-border-radius:4px;
-            border-radius:4px;
-            background:#ddd;
-            overflow:hidden;
-            margin-right:4px;
-        }
-
-        #indicator > li.active {
-            background:#888;
-        }
-
-        #indicator > li:last-child {
-            margin:0;
-        }
-
+    #prevbtn, #nextbtn {
+        margin:10px 15px;
+    }
     </style>
-</head>
-<body>
-<div id="wrapper">
-    <div id="scroller">
-        <ul id="thelist">
-            <li><strong>1.</strong> <em>A robot may not injure a human being or, through inaction, allow a human being to come to harm.</em></li>
-            <li><strong>2.</strong> <em>A robot must obey any orders given to it by human beings, except where such orders would conflict with the First Law.</em></li>
-            <li><strong>3.</strong> <em>A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.</em></li>
+    <script src="http://code.jquery.com/jquery-1.5.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>
 
-        </ul>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>jQuery Mobile Dialog-Based Gallery</title>
+    <script>$('.gallerycontent img').bind('tap',function(event, ui){
+        var src = $(this).attr("src");
+        var alt = $(this).attr("alt");
+        $('#dialogcontent').empty().append('<a href="#gallerypage"><img src="' + src + '" style="width:100%; height:100%;"/></a>' );
+        $('#dialoghead').empty().append('<center><h2>' + alt + '</h2></center>' );
+        $(this).parent().addClass('selectedimg');
+    });
+
+            function gonext() {
+        var current = $('a.selectedimg');
+        if (current.hasClass('last')) {
+            var next = $('a.first')
+        } else {
+            var next = current.next();
+        }
+
+        var src = next.find('img').attr("src");
+        var alt = next.find('img').attr("alt");
+        next.addClass('selectedimg');
+        current.removeClass('selectedimg');
+        $('#dialogcontent').empty().append('<a href="#gallerypage"><img src="' + src + '" style="width:100%; height:100%;"/></a>' );
+        $('#dialoghead').empty().append('<center><h2>' + alt + '</h2></center>' );
+    }
+
+            function goprev() {
+        var current = $('a.selectedimg');
+        if (current.hasClass('first')) {
+            var prev = $('a.last')
+        } else {
+            var prev = current.prev();
+        }
+        var src = prev.find('img').attr("src");
+        var alt = prev.find('img').attr("alt");
+        prev.addClass('selectedimg');
+        current.removeClass('selectedimg');
+        $('#dialogcontent').empty().append('<a href="#gallerypage"><img src="' + src + '" style="width:100%; height:100%;"/></a>' );
+        $('#dialoghead').empty().append('<center><h2>' + alt + '</h2></center>' );
+    }
+
+            $('#nextbtn').bind('tap',function(event, ui){
+                gonext();
+            });
+
+    $('#imgshow').bind('swipeleft',function(event, ui){
+        gonext();
+    });
+
+    $('#prevbtn').bind('tap',function(event, ui){
+        goprev();
+    });
+
+    $('#imgshow').bind('swiperight',function(event, ui){
+        goprev();
+    });
+    </script>
+</head>
+
+<body>
+<div data-role="page" id="gallerypage" data-theme="a">
+
+    <div data-role="header">
+        <h1 class="headtitle">Gallery</h1>
+    </div> <!--header-->
+
+    <div data-role="content" id="pagecontent">
+        <div class="gallerycontent">
+            <a href="#imgshow" data-transition="pop" data-rel="dialog" class="first">
+                <img src="http://img.muyingzhijia.com/product/normal/77425_01_01.jpg" alt="Within Temptation - The Unforgiving"/>
+            </a>
+            <a href="#imgshow" data-transition="pop" data-rel="dialog">
+                <img src="http://img.muyingzhijia.com/product/normal/76731_01_01.jpg" alt="Nightwish - Imaginarium"/>
+            </a>
+            <a href="#imgshow" data-transition="pop" data-rel="dialog">
+                <img src="http://img.muyingzhijia.com/product/normal/77366_01_01.jpg" alt="Epica - Design Your Universe"/>
+            </a>
+            <a href="#imgshow" data-transition="pop" data-rel="dialog">
+                <img src="http://img.muyingzhijia.com/product/normal/77220_01_01.jpg" alt="Epidemia - Way Home"/>
+            </a>
+            <a href="#imgshow" data-transition="pop" data-rel="dialog" class="first">
+                <img src="http://img.muyingzhijia.com/product/normal/77425_01_01.jpg" alt="Within Temptation - The Unforgiving"/>
+            </a>
+            <a href="#imgshow" data-transition="pop" data-rel="dialog">
+                <img src="http://img.muyingzhijia.com/product/normal/76731_01_01.jpg" alt="Nightwish - Imaginarium"/>
+            </a>
+            <a href="#imgshow" data-transition="pop" data-rel="dialog">
+                <img src="http://img.muyingzhijia.com/product/normal/77366_01_01.jpg" alt="Epica - Design Your Universe"/>
+            </a>
+            <a href="#imgshow" data-transition="pop" data-rel="dialog">
+                <img src="http://img.muyingzhijia.com/product/normal/77220_01_01.jpg" alt="Epidemia - Way Home"/>
+            </a>
+        </div>
+    </div> <!--/content-->
+
+    <div data-role="footer" style="height:40px;line-height:40px;">
+        <center>jQuery Mobile Galeery</center>
+    </div> <!--/footer-->
+
+</div> <!--/page-->
+
+<div data-role="dialog"  id="imgshow"  data-theme="a">
+    <div data-role="header" data-theme="a">
+        <div id="dialoghead"></div>
+    </div><!-- /header -->
+
+    <div data-role="content" data-theme="a">
+        <center><div id="dialogcontent"></div></center>
+    </div>
+
+    <div data-role="footer">
+        <center>
+            <a href="#" id="prevbtn" data-role="button" data-iconpos="notext" data-icon="arrow-l">Previous</a>
+            <a href="#" id="nextbtn" data-role="button" data-iconpos="notext" data-icon="arrow-r">Next</a>
+        </center>
     </div>
 </div>
-<div id="nav">
-    <div id="prev" onclick="myScroll.scrollToPage('prev', 0);return false">&larr; prev</div>
-    <ul id="indicator">
-        <li class="active">1</li>
-        <li>2</li>
-        <li>3</li>
 
-    </ul>
-    <div id="next" onclick="myScroll.scrollToPage('next', 0);return false">next &rarr;</div>
-</div>
 </body>
 </html>
