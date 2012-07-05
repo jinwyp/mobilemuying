@@ -29,6 +29,9 @@ p{line-height: 1.6em;}
 .groupbuttonfullwidth a{
 	width:33%;
 }
+/**/
+.page{text-align: center;}
+.page a{width:40%;}
 
 /*user login*/
 label.error,span.error {

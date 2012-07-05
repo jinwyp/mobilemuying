@@ -182,72 +182,70 @@
         
 	<!-- deliverylist -->
 	<div data-role="page" id="deliverylist" data-title="选择配送方式">
-		<div data-role="header" data-theme="a">
-			<div class="header">
-				<div class="logo">
-					<a href="index.html">
-						<img src="images/logo.png" />
-					</a>
-				</div>
-				<div class="nav">
-					<a href="category.html" class="menu"></a>
-					<a href="myaccount.html" class="user"></a>
-					<a href="shoppingcart.html" class="cart"></a>
-				</div>
-			</div>
-			<div data-role="navbar" data-iconpos="left">
-				<ul>
-					<li>
-						<a href="index.html" data-theme="c" data-icon="home">首页</a>
-					</li>
-					<li>
-						<a href="shoppingcart.html"  data-theme="c" data-icon="check">购物车</a>
-					</li>
-					<li>
-						<a href="orderconfirm.html"  data-theme="e" data-icon="arrow-r" >提交订单</a>
-					</li>
-				</ul>
-			</div>
+        <div data-role="header" data-theme="a">
+            <div class="header">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png"/>
+                    </a>
+                </div>
+                <div class="nav">
+                    <a href="category.html" class="menu"></a>
+                    <a href="myaccount.html" class="user"></a>
+                    <a href="shoppingcart.html" class="cart"></a>
+                </div>
+            </div>
+            <div data-role="navbar" data-iconpos="left">
+                <ul>
+                    <li>
+                        <a href="index.html" data-theme="c" data-icon="home">首页</a>
+                    </li>
+                    <li>
+                        <a href="shoppingcart.html" data-theme="c" data-icon="check">购物车</a>
+                    </li>
+                    <li>
+                        <a href="orderconfirm.html" data-theme="e" data-icon="arrow-r">提交订单</a>
+                    </li>
+                </ul>
+            </div>
 		</div>
-  
                     
 		<div data-role="content">
-            <div data-role="fieldcontain" >
-					<fieldset data-role="controlgroup">
-						<legend>选择配送方式</legend>
-						<input type="radio" name="radio-type-1" id="radio-type-1" value="type-1" checked="checked" />
-						<label for="radio-type-1">母婴之家快递（覆盖范围上海市区用户）</label>
-						<input type="radio" name="radio-type-1" id="radio-type-2" value="type-2" />
-						<label for="radio-type-2">中通快递送货（覆盖范围江苏、浙江省用户）</label>
-						<input type="radio" name="radio-type-1" id="radio-type-3" value="type-3" />
-						<label for="radio-type-3">EMS邮政特快（覆盖范围全国绝大部分乡镇村）</label>
-					</fieldset>
-				</div>
+            <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup">
+                    <legend>选择配送方式</legend>
+                    <input type="radio" name="radio-type-1" id="radio-type-1" value="type-1" checked="checked"/>
+                    <label for="radio-type-1">母婴之家快递（覆盖范围上海市区用户）</label>
+                    <input type="radio" name="radio-type-1" id="radio-type-2" value="type-2"/>
+                    <label for="radio-type-2">中通快递送货（覆盖范围江苏、浙江省用户）</label>
+                    <input type="radio" name="radio-type-1" id="radio-type-3" value="type-3"/>
+                    <label for="radio-type-3">EMS邮政特快（覆盖范围全国绝大部分乡镇村）</label>
+                </fieldset>
+            </div>
 
-            <div data-role="fieldcontain" >
-					<fieldset data-role="controlgroup" data-type="">
-						<legend>选择送货时间</legend>
-                        <input type="radio" name="radio-date-1" id="radio-date-1" value="date-1" checked="checked" />
-                        <label for="radio-date-1">只工作日送货（双休日、假日不用送）</label>
-                        <input type="radio" name="radio-date-1" id="radio-date-2" value="date-2" />
-                        <label for="radio-date-2">工作日、双休日与假日均可送货</label>
-                        <input type="radio" name="radio-date-1" id="radio-date-3" value="date-3" />
-                        <label for="radio-date-3">只双休日、假日送货（工作日不用送）</label>
-					</fieldset>
-				</div>
+            <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup" data-type="">
+                    <legend>选择送货时间</legend>
+                    <input type="radio" name="radio-date-1" id="radio-date-1" value="date-1" checked="checked"/>
+                    <label for="radio-date-1">只工作日送货（双休日、假日不用送）</label>
+                    <input type="radio" name="radio-date-1" id="radio-date-2" value="date-2"/>
+                    <label for="radio-date-2">工作日、双休日与假日均可送货</label>
+                    <input type="radio" name="radio-date-1" id="radio-date-3" value="date-3"/>
+                    <label for="radio-date-3">只双休日、假日送货（工作日不用送）</label>
+                </fieldset>
+            </div>
 
-            <div data-role="fieldcontain" >
+            <div data-role="fieldcontain">
                 <legend>付款方式</legend>
-					<fieldset data-role="controlgroup">
-						<legend></legend>
-						<input type="radio" name="radio-pay-1" id="radio-choice-1" value="choice-1" checked="checked" />
-						<label for="radio-choice-1">现金</label>
-						<input type="radio" name="radio-pay-1" id="radio-choice-2" value="choice-2" />
-						<label for="radio-choice-2">POS机刷卡（仅支持带有银联标识的银行卡）</label>
-					</fieldset>
-				</div>
-			</div>
-			<a href="orderconfirm.html"   data-role="button" data-theme="a">确认保存</a>
+                <fieldset data-role="controlgroup">
+                    <legend></legend>
+                    <input type="radio" name="radio-pay-1" id="radio-choice-1" value="choice-1" checked="checked"/>
+                    <label for="radio-choice-1">现金</label>
+                    <input type="radio" name="radio-pay-1" id="radio-choice-2" value="choice-2"/>
+                    <label for="radio-choice-2">POS机刷卡（仅支持带有银联标识的银行卡）</label>
+                </fieldset>
+            </div>
+        <a href="orderconfirm.html" data-role="button" data-theme="a">确认保存</a>
 		</div>
 
 		<div data-role="footer" data-theme="c" class="p10">
