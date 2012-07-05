@@ -35,19 +35,17 @@
 				
 			</div>
 			<div data-role="content">
-				<form id="frmLogin" action="myaccount.html">
+				<form id="frmLogin" action="">
 					<div data-role="fieldcontain">
 						<fieldset data-role="controlgroup" id="test">
 							<label for="email">邮箱地址</label>
-							<input type="text" id="email" name="email" class="required email" placeholder="请填写邮箱Email地址" value="" />
-
-							
+							<input type="text" id="email" name="email" class="required email" placeholder="请填写Email地址" value="" />
 						</fieldset>
 					</div>
 					<div data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
 							<label for="password">密码</label>
-							<input type="password" id="password" name="password" class="required" placeholder="请输入6-20位英文字母、字符或数字" value="" />
+							<input type="password" id="password" name="password" class="required" placeholder="请输入密码" value="" />
 						</fieldset>
 					</div>
 					<input data-theme="b" value="登录" type="submit" />
@@ -124,11 +122,11 @@
 				</div>
 			</div>
 			<div data-role="content">
-				<form id="frmLogin" action="getpassword-success.html">
+				<form id="frmgetpassword" action="getpassword-success.html">
 					<div data-role="fieldcontain" class="ui-hide-label">
 						<fieldset data-role="controlgroup">
 							<label for="email">邮箱地址</label>
-							<input type="text" id="email" name="email" class="required email" placeholder="请填写您注册时的邮箱地址" value="" />
+							<input type="text" id="email" name="email" class="required email" placeholder="请填写您注册时的Email地址" value="" />
 						</fieldset>
 					</div>
 					<input data-theme="b" value="找回密码" type="submit" />
@@ -154,6 +152,8 @@
 		</div>
         <script src="jquerymobile/jquery.min.js"></script>
         <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/myapp.js"></script>
         <script>
             $('.gotop').tap(function(){
                 $.mobile.silentScroll(10);

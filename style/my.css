@@ -32,13 +32,18 @@ p{line-height: 1.6em;}
 
 /*user login*/
 label.error {
-    float: none;
     color: red;
     font-size: 16px;
     font-weight: normal;
     line-height: 1.4;
     margin-top: 0.5em;
     width: 100%;
-    display: block;
-    margin-left: 22%;
+    float: none;
 }
+@media screen and (orientation: portrait){
+    label.error { margin-left: 0; display: block; }
+}
+@media screen and (orientation: landscape){
+    label.error { display: inline-block; margin-left: 22%; }
+}
+form em { color: red; font-weight: bold; padding-right: .25em; }

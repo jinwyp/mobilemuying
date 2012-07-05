@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title></title>
         <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.1.0.min.css" />
-        <link rel="stylesheet" href="style/my.css" />    
+        <link rel="stylesheet" href="style/my.css" />
     </head>
     <body>
         <!-- registration -->
@@ -26,15 +26,15 @@
 					<ul>
 						<li>
 							<a href="index.html" data-theme="c" data-icon="home">首页</a>
-						</li>					
+						</li>
 						<li>
 							<a href="registration.html" data-theme="e" data-icon="grid">注册</a>
-						</li>						
+						</li>
 					</ul>
 				</div>
 			</div>
 			<div data-role="content">
-				<form id="frmLogin" action="index.html">
+				<form id="frmReg" action="">
 					<div data-role="fieldcontain" class="ui-hide-label">
 						<fieldset data-role="controlgroup">
 							<label for="email">邮箱地址</label>
@@ -44,13 +44,13 @@
 					<div data-role="fieldcontain" class="ui-hide-label">
 						<fieldset data-role="controlgroup">
 							<label for="password">密码</label>
-							<input type="password" id="password" name="password" class="required" placeholder="请输入6-20位英文字母、字符或数字" value="" />
+							<input type="password" id="password" name="password" class="required" placeholder="请输入密码,为6-20位英文字母、字符或数字" value="" />
 						</fieldset>
 					</div>
 					<div data-role="fieldcontain" class="ui-hide-label">
 						<fieldset data-role="controlgroup">
-							<label for="password02">确认密码</label>
-							<input type="password" id="password02" name="password02" class="required" placeholder="请输入确认密码" value="" />
+							<label for="confirm_password">确认密码</label>
+							<input type="password" id="confirm_password" name="confirm_password" class="required" placeholder="请输入确认密码" value="" />
 						</fieldset>
 					</div>
 					<div data-role="fieldcontain" class="ui-hide-label">
@@ -154,7 +154,7 @@
 		</div>
 
 
-  <!-- userpolicy -->       
+  <!-- userpolicy -->
 		<div data-role="page" id="userpolicy" data-title="母婴之家用户协议">
 			<div data-role="header" data-theme="a">
 				<div class="header">
@@ -172,7 +172,7 @@
 					<ul>
 						<li>
 							<a href="index.html" data-theme="c" data-icon="home">首页</a>
-						</li>						
+						</li>
 						<li>
 							<a href="registration.html" data-theme="c" data-icon="grid">注册</a>
 						</li>
@@ -214,6 +214,8 @@
 
 		<script src="jquerymobile/jquery.min.js"></script>
         <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/myapp.js"></script>
         <script>
             $('.gotop').tap(function(){
                 $.mobile.silentScroll(10);
