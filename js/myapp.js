@@ -28,10 +28,12 @@ $("#frmLogin").validate({
 });
 
 $("#frmReg").validate({
+    errorElement:"span",
     rules: {
         email: {
             required: true,
-            email: true
+            email: true,
+
         },
         password: {
             required: true,
@@ -43,7 +45,12 @@ $("#frmReg").validate({
             minlength: 6,
             maxlength: 20,
             equalTo: "#password"
-        }
+        },
+        mobile: {
+            required: true,
+            number: true,
+
+},
     },
 
     messages: {
@@ -61,8 +68,14 @@ $("#frmReg").validate({
             minlength: jQuery.validator.format("确认密码不能小于{0}个字符"),
             maxlength: jQuery.validator.format("密码不能最多超过{0}的字符"),
             equalTo: "两次输入密码不一致"
+        },
+        mobile: {
+            required: "请输入手机号",
+            number: "请输入有效的手机号码"
+
         }
     }
+
 });
 
 

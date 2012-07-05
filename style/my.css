@@ -31,7 +31,7 @@ p{line-height: 1.6em;}
 }
 
 /*user login*/
-label.error {
+label.error,span.error {
     color: red;
     font-size: 16px;
     font-weight: normal;
@@ -41,9 +41,12 @@ label.error {
     float: none;
 }
 @media screen and (orientation: portrait){
-    label.error { margin-left: 0; display: block; }
+    label.error ,span.error{ margin-left: 0; display: block; }
 }
 @media screen and (orientation: landscape){
-    label.error { display: inline-block; margin-left: 22%; }
+    label.error{ display: inline-block; margin-left: 22%; }
+}
+@media screen and (orientation: landscape){
+   span.error{ display: inline-block; }
 }
 form em { color: red; font-weight: bold; padding-right: .25em; }
