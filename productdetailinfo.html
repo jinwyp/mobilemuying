@@ -6,28 +6,7 @@
         <title></title>
         <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.1.0.min.css" />
         <link rel="stylesheet" href="style/my.css" />
-        <style>
-            #wrapper-goods-img {
-                width: 300px;
-                height: 300px;
-                position: relative;
-                z-index: 1;
-                overflow: hidden;
-                background: #aaa;
 
-            }
-            #scroller ul {
-                list-style: none;
-                display: block;
-                width: 100%;
-                height: 100%;
-                padding: 0;
-                margin: 0;
-                text-align: left;
-
-            }
-            #scroller ul li{position: absolute;}
-        </style>
     </head>
     <body>
         <!-- intro -->
@@ -68,25 +47,22 @@
                 <div class="content-primary">
                     <h2>商品名称 好奇金装贴身舒适纸尿裤超值特惠装L78片(品牌好奇)</h2>
 
-                     <div id="wrapper-goods-img">
-                 <div id="scroller">
-                <ul>
-
+                        <div id="imggallery" class="imggallerystyle">
+                            <ul>
                                 <li class="imggalleryshow"><img src="http://img.muyingzhijia.com/product/normal/61920_01_01.jpg" width="300"
                                          height="300"/></li>
                                 <li><img src="http://img.muyingzhijia.com/product/normal/73654_01_01.jpg" width="300"
                                          height="300"/></li>
                                 <li><img src="http://img.muyingzhijia.com/product/normal/76370_01_01.jpg" width="300" height="300"/></li>
-
-                             </ul>
+                            </ul>
                         </div>
-                         </div>
+
 
                     <div class="p10"></div>
                     <div data-role="controlgroup" data-type="horizontal" data-theme="c" class="page">
-                        <a href="#prev" data-role="button" data-icon="arrow-l" data-iconpos="left" data-mini="true" id="prev">上一页</a>
-                        &nbsp;&nbsp;<span>1/3</span>&nbsp;&nbsp;
-                        <a href="#next" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true" id="next">下一页</a>
+                        <a href="#prev" data-role="button" data-icon="arrow-l" data-iconpos="left" data-mini="true" id="imggalleryprev">上一页</a>
+                        &nbsp;&nbsp;<span id="imggallerynum">1/3</span>&nbsp;&nbsp;
+                        <a href="#next" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true" id="imggallerynext">下一页</a>
                     </div>
                     <div data-role=""></div>
                     <div class="iteminfo">
@@ -208,6 +184,6 @@
 
 		<script src="jquerymobile/jquery.min.js"></script>
         <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>
-        <script src="js/myapp.js"></script>
+        <script src="js/jquery.mobile.swipegallery.js"></script>
     </body>
 </html>
