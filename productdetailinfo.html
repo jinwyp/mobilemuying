@@ -7,25 +7,7 @@
         <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.1.0.min.css" />
         <link rel="stylesheet" href="style/my.css" />
         <style>
-            #wrapper-goods-img {
-                width: 300px;
-                height: 300px;
-                position: relative;
-                z-index: 1;
-                overflow: hidden;
-                background: #aaa;
 
-            }
-
-            #scroller ul {
-                list-style: none;
-                display: block;
-                width: 100%;
-                height: 100%;
-                padding: 0;
-                margin: 0;
-                text-align: left;
-            }
         </style>
     </head>
     <body>
@@ -67,16 +49,17 @@
                 <div class="content-primary">
                     <h2>商品名称 好奇金装贴身舒适纸尿裤超值特惠装L78片(品牌好奇)</h2>
 
-                    <div id="wrapper-goods-img">
-                        <div id="scroller">
+                        <div id="imggallery" class="imggallerystyle">
                             <ul>
-                                <li><img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" width="300"
+                                <li class="imggalleryshow"><img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" width="300"
                                          height="300"/></li>
-                                <li><img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" width="300"
+                                <li ><img src="http://img.muyingzhijia.com/product/org/76708_01_02.jpg" width="300"
                                          height="300"/></li>
+                                <li ><img src="http://img.muyingzhijia.com/product/org/76708_01_03.jpg" width="300"
+                                          height="300"/></li>
                             </ul>
                         </div>
-                    </div>
+
                     <div class="p10"></div>
                     <div data-role="controlgroup" data-type="horizontal" data-theme="c" class="page">
                         <a href="#prev" data-role="button" data-icon="arrow-l" data-iconpos="left" data-mini="true" id="prev">上一页</a>
@@ -203,10 +186,7 @@
 
 		<script src="jquerymobile/jquery.min.js"></script>
         <script src="jquerymobile/jquery.mobile-1.1.0.min.js"></script>
-        <script type="text/javascript">
-            $('.gotop').tap(function(){
-                $.mobile.silentScroll(10);
-            });
-        </script>
+        <script src="js/jquery.mobile.swipegallery.js"></script>
+
     </body>
 </html>
