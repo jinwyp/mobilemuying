@@ -1,7 +1,4 @@
-
-
 $("#frmLogin").validate({
-
     rules: {
         email: {
             required: true,
@@ -48,9 +45,9 @@ $("#frmReg").validate({
         },
         mobile: {
             required: true,
-            number: true,
+            number: true
 
-},
+}
     },
 
     messages: {
@@ -75,7 +72,23 @@ $("#frmReg").validate({
 
         }
     }
-
 });
+
+$('.gotop').tap(function(){
+    $.mobile.silentScroll(10);
+});
+    $("#scroller li").bind("swipeleft",function(e){
+        //scrollSupressionThreshold:10px,
+        //horizontalDistanceThreshold:30px,
+        //alert("f f af a")
+        $(this).animate({left:'-300px'},"1000");
+        $(this).prev().animate({left:'-300px'},"1000");
+        return false;
+    });
+    $("#scroller li").bind("swiperight",function(){
+        $(this).hide();
+        $(this).prev().show();
+        return false;
+    });
 
 
