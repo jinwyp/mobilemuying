@@ -70,9 +70,11 @@
                     <div id="wrapper-goods-img">
                         <div id="scroller">
                             <ul>
-                                <li><img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" width="300"
+                                <li><img src="http://img.muyingzhijia.com/product/normal/61920_01_01.jpg" width="300"
                                          height="300"/></li>
-                                <li><img src="http://img.muyingzhijia.com/product/org/76708_01_01.jpg" width="300"
+                                <li><img src="http://img.muyingzhijia.com/product/normal/73654_01_01.jpg" width="300"
+                                         height="300"/></li>
+                                <li><img src="http://img.muyingzhijia.com/product/normal/76370_01_01.jpg" width="300"
                                          height="300"/></li>
                             </ul>
                         </div>
@@ -207,6 +209,14 @@
             $('.gotop').tap(function(){
                 $.mobile.silentScroll(10);
             });
+            $("#scroller li").bind("swipeleft",function(){
+                //scrollSupressionThreshold:10px,
+                //horizontalDistanceThreshold:30px,
+                //alert("f f af a")
+                $(this).animate({"left": "-300px"}, "slow","swing") ,
+                $(this).next().animate({"left": "+300px"}, "slow","swing")
+                    });
+
         </script>
     </body>
 </html>
