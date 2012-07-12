@@ -24,62 +24,27 @@ p{line-height: 1.6em;}
 .ui-font-red{color:#e60000;}
 .ui-font-green{color:#82be0e;}
 .ui-font-bold{font-weight:bold;font-size:1.5em;}
+.icon-custom{width:18px;height:18px;padding-right:24px;background:url(../js/lib/jquerymobile/images/icon-custom.png) no-repeat;}
+.icon-custom-01{background-position: 0 0}
+.icon-custom-02{background-position: 0 -18px;}
+.icon-custom-03{background-position: 0 -36px;}
+.icon-custom-04{background-position: 0 -54px;}
+.icon-custom-05{background-position: 0 -72px;}
 
 /*category*/
-.groupbuttonfullwidth a{
-	width:33%;
-}
+.groupbuttonfullwidth a{	width:33%;}
 /**/
 .page{text-align: center;}
 .page a{width:40%;}
-
 /*user login*/
-label.error,span.error {
-    color: red;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 1.4;
-    margin-top: 0.5em;
-    width: 100%;
-    float: none;
+label.error,span.error { color: red; font-size: 16px; font-weight: normal;  line-height: 1.4;  margin-top: 0.5em; width: 100%; float: none;}
+@media screen and (orientation: portrait){label.error ,span.error{ margin-left: 0; display: block; }
 }
-@media screen and (orientation: portrait){
-    label.error ,span.error{ margin-left: 0; display: block; }
+@media screen and (orientation: landscape){label.error{ display: inline-block; margin-left: 22%; }
 }
-@media screen and (orientation: landscape){
-    label.error{ display: inline-block; margin-left: 22%; }
+@media screen and (orientation: landscape){span.error{ display: inline-block; }
 }
-@media screen and (orientation: landscape){
-   span.error{ display: inline-block; }
-}
-
-.imggallerystyle {
-    width: 300px;
-    height: 300px;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    background: #aaa;
-}
-
-.imggallerystyle ul li{
-    list-style: none;
-    width: 300px;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-    display: none;
-    position: absolute;
-}
-.imggallerystyle .imggalleryshow {
-    display: block;
-    left:0;
-    top:0;
-}
-
-.imggallerystyle .imggallerynext {
-    display: block;
-    left:300px;
-    top:0;
-}
+.imggallerystyle {width: 300px; height: 300px; position: relative; z-index: 1; overflow: hidden; background: #aaa;}
+.imggallerystyle ul li{ list-style: none; width: 300px; height: 100%; padding: 0; margin: 0; text-align: left; display: none; position: absolute;}
+.imggallerystyle .imggalleryshow { display: block; left:0; top:0;}
+.imggallerystyle .imggallerynext { display: block; left:300px;top:0;}
