@@ -1,4 +1,4 @@
-$("#frmLogin").validate({
+jQuery("#frmLogin").validate({
     rules: {
         email: {
             required: true,
@@ -24,7 +24,7 @@ $("#frmLogin").validate({
     }
 });
 
-$("#frmReg").validate({
+jQuery("#frmReg").validate({
     errorElement:"span",
     rules: {
         email: {
@@ -70,9 +70,6 @@ $("#frmReg").validate({
         }
     }
 });
-
-$('#gotop').tap(function(){
-    $.mobile.silentScroll(10);
-});
+console.log(jQuery("#frmReg").html())
 
 
