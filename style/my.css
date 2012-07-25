@@ -48,3 +48,4 @@ label.error,span.error { color: red; font-size: 16px; font-weight: normal;  line
 .imggallerystyle ul li{ list-style: none; width: 300px; height: 100%; padding: 0; margin: 0; text-align: left; display: none; position: absolute;}
 .imggallerystyle .imggalleryshow { display: block; left:0; top:0;}
 .imggallerystyle .imggallerynext { display: block; left:300px;top:0;}
+#frmReg #checkbox_agree{margin-top:-15px;} /*hide checkbox*/
