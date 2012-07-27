@@ -63,9 +63,9 @@
 					<div data-role="fieldcontain">
 						<fieldset data-role="controlgroup" data-type="horizontal">
 							<legend>宝宝生日或预产期</legend>
-							<label for="select-choice-year">年</label>
-							<select name="select-choice-year" id="select-choice-year">
-								<option>年</option>
+<label for="select-choice-year"></label>
+							<select name="year" id="select-choice-year" class="required"  >
+								<option value="">年</option>
 								<option value="2013">2013</option>
 								<option value="2012">2012</option>
 								<option value="2011">2011</option>
@@ -74,9 +74,10 @@
 								<option value="2008">2008</option>
 								<option value="2007">2007</option>
 							</select>
-							<label for="select-choice-month">月</label>
-							<select name="select-choice-month" id="select-choice-month">
-								<option>月</option>
+
+<label for="select-choice-month"> </label> 
+							<select name="month" id="select-choice-month" class="required" >
+								<option value="">月</option>
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -90,9 +91,10 @@
 								<option value="10">10</option>
 								<option value="12">12</option>
 							</select>
-							<label for="select-choice-day">日</label>
-							<select name="select-choice-day" id="select-choice-day">
-								<option>日</option>
+                          
+<label for="select-choice-day"> </label>  
+							<select name="day" id="select-choice-day" class="required" >
+								<option value="">日</option>
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -125,6 +127,7 @@
 								<option value="30">30</option>
 								<option value="31">31</option>
 							</select>
+<div class="error"></div>
 						</fieldset>
 					</div>
 					<div data-role="fieldcontain">
@@ -215,8 +218,8 @@
 		</div>
 
 		<script src="js/lib/jquery/jquery-1.7.1.min.js"></script>
-        <script src="js/lib/jquerymobile/jquery.mobile-1.1.0.min.js"></script>
-		<script src="js/lib/jquery/jquery.validate.min.js"></script>
+        <script src="js/lib/jquerymobile/jquery.mobile-1.1.0.min.js"></script> 
+     	<script src="js/lib/jquery/jquery.validate.min.js"></script>
         <script src="js/my.validate.js"></script>
         <script src="js/myapp.js"></script>
     </body>
