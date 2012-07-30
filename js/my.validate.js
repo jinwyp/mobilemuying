@@ -89,16 +89,7 @@ jQuery("#frmReg").validate({
 
     }
     },
-    groups: {
-        username: "year month day"
-    },
-    errorPlacement: function (error, element) {
-        if (element.attr("name") == "year" || element.attr("name") == "month" || element.attr("name") == "day")
-             error.appendTo("div.error");
 
-        else
-            error.insertAfter(element);
-    }
 });
 
 
