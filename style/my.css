@@ -36,6 +36,7 @@ p{line-height: 1.6em;}
 /**/
 .page{text-align: center;}
 .page a{width:40%;}
+.error-text{color:#ec4040;padding:5px 0;}
 /*user login*/
 label.error,span.error { color: red; font-size: 16px; font-weight: normal;  line-height: 1.4;  margin-top: 0.5em; width: 100%; float: none;}
 @media screen and (orientation: portrait){label.error ,span.error{ margin-left: 0; display: block; }

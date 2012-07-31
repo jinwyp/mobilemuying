@@ -88,7 +88,16 @@ jQuery("#frmReg").validate({
              required:"请您填写宝宝生日或预产期"
 
     }
-    },
+     },
+    groups: {
+           username: "year month day"
+       },
+   errorPlacement: function (error, element) {
+           if (element.attr("name") == "year" || element.attr("name") == "month" || element.attr("name") == "day")
+                    error.appendTo("div.error");
+              else
+              error.insertAfter(element);
+}
 
 });
 
