@@ -24,6 +24,25 @@ jQuery("#frmLogin").validate({
     }
 });
 
+jQuery("#frmgetpassword").validate({
+    errorElement:"span",
+    rules: {
+        email: {
+            required: true,
+            email: true
+        }
+    },
+
+    messages: {
+        email: {
+            required: "请输入Email地址",
+            email: "请输入正确的email地址 / 填写的用户名不存在"
+        }
+    }
+
+});
+
+
 jQuery("#frmReg").validate({
     errorElement:"span",
     rules:{
