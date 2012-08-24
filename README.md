@@ -4,7 +4,7 @@
 
 # 文档结构
 
-1. js文件夹是所有的js文件  其中lib 文件夹是 所有的js库文件 包括jQuery 和 jQuery Mobile 的js,css 和jQueryMobile自带图片图标文件 在jquerymobile/images下
+1. js000文件夹是所有的js文件  其中lib 文件夹是 所有的js库文件 包括jQuery 和 jQuery Mobile 的js,css 和jQueryMobile自带图片图标文件 在jquerymobile/images下
 
 2. js 文件夹下的 myapp 是我们自己使用的js文件. my.validate.js是表单验证内容.
 
