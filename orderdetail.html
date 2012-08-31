@@ -12,15 +12,15 @@
 		<div data-role="page" id="orderdetail" data-title="订单详情">
 			<div data-role="header" data-theme="a">
 				<div class="header">
-					<div class="logo">
-						<a href="index.html"> <img src="images/logo.png" />
-						</a>
-					</div>
-					<div class="nav">
-						<a href="category.html" class="menu"></a>
-						<a href="myaccount.html" class="user"></a>
-						<a href="shoppingcart.html" class="cart"></a>
-					</div>
+                    <div class="logo">
+                        <a href="index.html"  rel="external"> <img src="images/logo.png" />
+                        </a>
+                    </div>
+                    <div class="nav">
+                        <a href="category.html"  rel="external" class="menu"></a>
+                        <a href="myaccount.html" rel="external"  class="user"></a>
+                        <a href="shoppingcart.html"  rel="external" class="cart"></a>
+                    </div>
 				</div>
 				<div data-role="navbar" data-iconpos="left">
 					<ul>
@@ -47,12 +47,21 @@
                             <p>发票类型：食品发票</p>
                             <p>发票抬头：公司 宜家中国</p>
                         </li>
-                        </ul>
-                        <div data-role=""><a href="onlinepayment.html" data-role="button" data-inline="true" data-theme="e" >在线支付</a><a href="#" data-role="button" data-inline="true" data-mini="true">取消订单</a></div>
-                        <ul data-role="listview" data-inset="true" data-divider-theme="d">
+                        <li>
+                            <a href="#deliverinfo">
+                                查看物流信息
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div data-role="">
+                        <a href="onlinepayment.html" data-role="button" data-inline="true" data-theme="e" >在线支付</a>
+                        <a href="#" data-role="button" data-inline="true" data-mini="true">取消订单</a>
+                    </div>
+                    <ul data-role="listview" data-inset="true" data-divider-theme="d">
                         <li data-role="list-divider">订单商品列表</li>
                         <li>
-                            <a href="productdetailinfo.html">
+                            <a href="productdetailinfo.html rel="external"">
                                 <img src="http://img.muyingzhijia.com/product/normal/66158_01_01.jpg" />
                                 <p>商品编号：<strong>119902</strong></p>
                                 <p>名称：<strong>商品名称商品名称商品名称22</strong></p>
@@ -62,7 +71,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="productdetailinfo.html">
+                            <a href="productdetailinfo.html rel="external"">
                                 <img src="http://img.muyingzhijia.com/product/normal/66158_01_01.jpg" />
                                 <p>商品编号：<strong>119902</strong></p>
                                 <p>名称：<strong>商品名称商品名称商品名称22</strong></p>
@@ -72,7 +81,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="productdetailinfo.html">
+                            <a href="productdetailinfo.html rel="external"">
                                 <img src="http://img.muyingzhijia.com/product/normal/66158_01_01.jpg" />
                                 <p>商品编号：<strong>119902</strong></p>
                                 <p>名称：<strong>商品名称商品名称商品名称22</strong></p>
@@ -82,7 +91,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="productdetailinfo.html">
+                            <a href="productdetailinfo.html rel="external"">
                                 <img src="http://img.muyingzhijia.com/product/normal/66158_01_01.jpg" />
                                 <p>商品编号：<strong>119902</strong></p>
                                 <p>名称：<strong>商品名称商品名称商品名称22</strong></p>
@@ -92,7 +101,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="productdetailinfo.html">
+                            <a href="productdetailinfo.html rel="external"">
                                 <img src="http://img.muyingzhijia.com/product/normal/66158_01_01.jpg" />
                                 <p>商品编号：<strong>119902</strong></p>
                                 <p>名称：<strong>商品名称商品名称商品名称22</strong></p>
@@ -101,11 +110,12 @@
                                 <p>小计：<strong class="ui-font-red">￥212.00</strong></p>
                             </a>
                         </li>
-                        <li data-icon="arrow-l" data-iconpos="left" >
-                            <a href="orderlist.html"   >返回</a>
-                        </li>
+
 					</ul>
-                    <div data-role=""><a href="onlinepayment.html" data-role="button" data-inline="true" data-theme="e" >在线支付</a><a href="#" data-role="button" data-inline="true" data-mini="true">取消订单</a></div>
+                    <div data-role="">
+                        <a href="onlinepayment.html" data-role="button" data-inline="true" data-theme="e" >在线支付</a>
+                        <a href="#" data-role="button" data-inline="true" data-mini="true">取消订单</a>
+                    </div>
 				</div>
 			</div>
 			<div data-role="footer" data-theme="c" class="p10">
