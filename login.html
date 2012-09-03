@@ -13,13 +13,13 @@
 			<div data-role="header" data-theme="a">
 				<div class="header">
 					<div class="logo">
-						<a href="index.html"> <img src="images/logo.png" />
+						<a href="index.html"  rel="external"> <img src="images/logo.png" />
 						</a>
 					</div>
 					<div class="nav">
-						<a href="category.html" class="menu"></a>
-						<a href="myaccount.html" class="user"></a>
-						<a href="shoppingcart.html" class="cart"></a>
+						<a href="category.html"  rel="external" class="menu"></a>
+						<a href="myaccount.html" rel="external"  class="user"></a>
+						<a href="shoppingcart.html"  rel="external" class="cart"></a>
 					</div>
 				</div>
 				<div data-role="navbar" data-iconpos="left">
@@ -52,10 +52,10 @@
 					
 					<div class="ui-grid-a p10">
 						<div class="ui-block-a">
-							<a href="#forgetpassword" rel="external" >忘记密码</a>
+							<a href="#forgetpassword" >忘记密码</a>
 						</div>
 						<div class="ui-block-b">
-							<a href="registration.html" >立即注册</a>
+							<a href="registration.html" rel="external">立即注册</a>
 						</div>
 					</div>
 					<ul data-role="listview" data-divider-theme="c" data-inset="true">
@@ -74,7 +74,6 @@
 						</li>
 					</ul>
 				</form>
-				
 			</div>
 			<div data-role="footer" data-theme="c" class="p10">
 				<div class="ui-grid-b" style="padding-bottom:5px;">
@@ -100,15 +99,15 @@
 		<div data-role="page" id="forgetpassword" data-title="找回密码">
 			<div data-role="header" data-theme="a">
 				<div class="header">
-					<div class="logo">
-						<a href="index.html"> <img src="images/logo.png" />
-						</a>
-					</div>
-					<div class="nav">
-						<a href="category.html" class="menu"></a>
-						<a href="myaccount.html" class="user"></a>
-						<a href="shoppingcart.html" class="cart"></a>
-					</div>
+                    <div class="logo">
+                        <a href="index.html"  rel="external"> <img src="images/logo.png" />
+                        </a>
+                    </div>
+                    <div class="nav">
+                        <a href="category.html"  rel="external" class="menu"></a>
+                        <a href="myaccount.html" rel="external"  class="user"></a>
+                        <a href="shoppingcart.html"  rel="external" class="cart"></a>
+                    </div>
 				</div>
 				<div data-role="navbar" data-iconpos="left">
 					<ul>
@@ -122,7 +121,7 @@
 				</div>
 			</div>
 			<div data-role="content">
-				<form id="frmgetpassword" action="getpassword-success.html">
+				<form id="frmgetpassword" action="#getpasswordsuccess">
 					<div data-role="fieldcontain" class="ui-hide-label">
 						<fieldset data-role="controlgroup">
 							<label for="email">邮箱地址</label>
@@ -130,6 +129,7 @@
 						</fieldset>
 					</div>
 					<input data-theme="b" value="找回密码" type="submit" />
+
 				</form>
 			</div>
 			<div data-role="footer" data-theme="c" class="p10">
@@ -150,6 +150,62 @@
 				<div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
 			</div>
 		</div>
+
+
+        <!-- getpassword-success -->
+        <div data-role="page" id="getpasswordsuccess" data-title="找回密码成功">
+            <div data-role="header" data-theme="a" >
+                <div class="header">
+                    <div class="logo">
+                        <a href="index.html" rel="external"> <img src="images/logo.png" />
+                        </a>
+                    </div>
+                    <div class="nav">
+                        <a href="category.html" rel="external" class="menu"></a>
+                        <a href="myaccount.html" rel="external"  class="user"></a>
+                        <a href="shoppingcart.html" rel="external" class="cart"></a>
+                    </div>
+                </div>
+
+                <div data-role="navbar" data-iconpos="left" >
+                    <ul>
+                        <li>
+                            <a href="index.html" data-theme="c" data-icon="home">
+                                首页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="login.html" data-theme="e" data-icon="arrow-l" data-rel="back">返回 </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content">
+                <div class="p10">
+                    <p>找回密码成功<br /> 请访问邮箱xxx@163.com 查看密码 <br /><a href="http://mail.163.com">点击进入mail.163.com</a></p>
+                    <p>如果您长时间收不到邮件可以尝试：</p>
+                    <p>致电客服电话 400-820-1000</p>
+                    <p>或给母婴之家客服发送邮件 <a href="mailto:kf@muyingzhijia.com">kf@muyingzhijia.com</a></p>
+                </div>
+            </div>
+
+            <div data-role="footer" data-theme="c" class="p10">
+                <div class="ui-grid-b" style="padding-bottom:5px;">
+                    <div class="ui-block-a">
+                        <a href="login.html" rel="external">登录</a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="registration.html"  rel="external">注册</a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a href="http://www.muyingzhijia.com" rel="external">电脑版</a>
+                    </div>
+                </div>
+                <div><a href="#"  data-role="button" data-icon="arrow-u" data-iconpos="left">回顶部</a></div>
+                <div>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</div>
+            </div>
+        </div>
+
         <script src="js/lib/jquery/jquery-1.7.1.min.js"></script>
         <script src="js/lib/jquerymobile/jquery.mobile-1.1.0.min.js"></script>
         <script src="js/lib/jquery/jquery.validate.min.js"></script>
